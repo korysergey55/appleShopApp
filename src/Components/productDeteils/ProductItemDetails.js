@@ -5,14 +5,11 @@ import {
   useRouteMatch,
   withRouter,
 } from "react-router-dom";
-
-import { ProductItem } from "./ProductItemDetailsStyled";
-
 import { getProductWithIdSelector } from "../../redux/products/productsSelectors";
 import { useDispatch, useSelector } from "react-redux";
 import { getProductByIdOperation } from "../../redux/products/productsOperations";
 import { addToCartOperation, bayNowOperation } from "../../redux/cart/cartOperations";
-
+import styles from './styles.module.scss'
 
 const ProductItemDetails = () => {
 
@@ -36,48 +33,48 @@ const ProductItemDetails = () => {
   };
 
   return (
-    <ProductItem>
-      <button className="goBack" onClick={goBack}>
+    <div className={styles.page}>
+      <button className={styles.goBack} onClick={goBack}>
         Go back
       </button>
 
       {productById && (
-        <div className="itemContainer">
-          <h3 className="title">{productById.name}</h3>
-          <div className="imageWrapper">
+        <div className={styles.itemContainer}>
+          <h3 className={styles.title}>{productById.name}</h3>
+          <div className={styles.imageWrapper}>
             <img
               src={productById.image}
               alt={productById.name}
-              className="img"
+              className={styles.img}
             />
           </div>
-          <p className="description">{productById.description}</p>
-          <p className="price">
+          <p className={styles.description}>{productById.description}</p>
+          <p className={styles.price}>
             {productById.isSale ? (
               <>
-                <span className="sale">{productById.price}</span>
-                <span className=" withoutSale">{(productById.price - productById.price / 10).toFixed(0)}</span>{" "}
+                <span className={styles.sale}>{productById.price}</span>
+                <span className={styles.withoutSale}>{(productById.price - productById.price / 10).toFixed(0)}</span>{" "}
               </>
             ) : (
-                <span className="withoutSale">{productById.price}</span>
+                <span className={styles.withoutSale}>{productById.price}</span>
             )}
             {" грн"}
           </p>
-          <div className="options">
+          <div className={styles.options}>
             <button
               onClick={() => dispatch(addToCartOperation(productById))}
-              className="addToCart"
+              className={styles.addToCart}
             >
               Add to cart
             </button>
             <button onClick={() => dispatch(bayNowOperation(history, productById))}
-              className="bayNow">
+              className={styles.bayNow}>
               Bay Now
             </button>
           </div>
         </div>
       )}
-    </ProductItem>
+    </div>
   );
 };
 

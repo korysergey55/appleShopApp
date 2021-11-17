@@ -1,0 +1,16 @@
+@import '../../sourses/styles/variables.scss';
+
+.filterLabel {
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 25px;
+  font-weight: 700;
+  color: $brandColor;
+}
+.filterInput {
+  padding: 5px;
+  margin-left: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 2px solid $brandColor;
+}

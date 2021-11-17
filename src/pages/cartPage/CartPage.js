@@ -5,7 +5,7 @@ import { cartItemSelector, cartModalSelector, } from "../../redux/cart/cartSelec
 
 import Header from '../../containers/header/Header'
 import Cart from "../../Components/cart/Cart";
-import CartModal from "../../Components/cart/cartModal/CartModal";
+import Modal from "../../Components/modal/Modal";
 import CartOrder from "../../Components/cart/cartOrder/CartOrder";
 import Section from "../../containers/section/Section";
 
@@ -20,12 +20,18 @@ const CartPage = () => {
     dispatch(createOrder(cartItems));
   }, [dispatch, cartItems, openModal]);
 
+  useEffect(() => {
+    if (cartItems === 0){
+      dispatch(openModal());
+    }
+  }, [dispatch, cartItems]);
+  console.log(cartItems)
   return (
     <div className={styles.cartPage}>
       <Header />
       <Section title="Cart">
         <Cart />
-        {openModal ? <CartModal children={<CartOrder />} /> : null}
+        {openModal ? <Modal children={<CartOrder />} /> : null}
       </Section>
     </div>
   );

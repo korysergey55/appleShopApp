@@ -1,8 +1,9 @@
 import React from "react";
-import styles from "./styles.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { setFilter } from "../../redux/filter/filterActions";
 import { filterSelector } from "../../redux/filter/filterSelectors";
+
+import styles from "./styles.module.scss";
 
 const Filter = () => {
 
@@ -16,7 +17,7 @@ const Filter = () => {
  
  return (
   <label className={styles.filterLabel}>
-   Find Apple Product
+   Find Product
    <input
     className={styles.filterInput}
     type="text"

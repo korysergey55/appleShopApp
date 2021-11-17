@@ -1,0 +1,32 @@
+.container {
+  .title {
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    color: #2b63ff;
+  }
+  .wripper {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+    .total {
+      margin-bottom: 20px;
+      font-size: 25px;
+      font-weight: 700;
+      text-align: center;
+      color: #2b63ff;
+    }
+    .orderButton {
+      min-width: 150px;
+      font-weight: 800;
+      font-size: 15px;
+      border: none;
+      background-color: rgb(104, 253, 5);
+      color: black;
+      box-shadow: 1px 1px 1px 1px #313030;
+    }
+  }
+}

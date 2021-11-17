@@ -1,12 +1,12 @@
 import React from "react";
-import styles from './CartOrderStyled.module.css'
 import { useDispatch, useSelector } from "react-redux";
 import { taggleModal } from "../../../redux/cart/cartActions";
 import {
   cartItemSelector,
   cartTotalPricelSelector,
 } from "../../../redux/cart/cartSelectors";
-import CartListItem from "../cartListItem/CartListItem";
+import CartItem from "../cartItem/CartItem";
+import styles from './styles.module.scss'
 
 const CartOrder = () => {
   const dispatch = useDispatch();
@@ -14,23 +14,25 @@ const CartOrder = () => {
   const totalPriceInOrder = useSelector(cartTotalPricelSelector);
 
   return (
-    <>
-      <h2 className={styles.cartOrderTitle}>Ваш заказ:</h2>
-      <ul className="CartListContainer">
+    <div className={styles.container}>
+      <h2 className={styles.title}>Ваш заказ:</h2>
+      <ul className={styles.orderList}>
         {cartItems.map((product) => (
-          <CartListItem key={product.id} product={product} />
+          <CartItem key={product.id} product={product} />
         ))}
       </ul>
-      <h2 className={styles.totalInfoTitle}>
-        Total price: {totalPriceInOrder} грн{" "}
-      </h2>
-      <button
-        className={styles.orderButton}
-        onClick={() => dispatch(taggleModal())}
-      >
-        Create order
-      </button>
-    </>
+      <div className={styles.wripper}>
+        <h2 className={styles.total}>
+          Total price: {totalPriceInOrder} грн{" "}
+        </h2>
+        <button
+          className={styles.orderButton}
+          onClick={() => dispatch(taggleModal())}
+        >
+          Create order
+        </button>
+      </div>
+    </div>
   );
 };
 

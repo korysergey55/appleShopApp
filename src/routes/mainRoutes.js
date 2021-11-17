@@ -1,11 +1,11 @@
 import { lazy } from "react";
 import IconComponent from "../containers/IconComponent/IconComponent";
-import pathes from '../utils/pathes'
+
 
 export const mainRoutes = [
   {
     name: "Home",
-    path: "/shop",
+    path: "/",
     component: lazy(() => import("../pages/homePage/HomePage")),
     exact: true,
     isRestricted: false,

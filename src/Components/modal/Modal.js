@@ -1,39 +1,52 @@
-import React, { Component } from "react";
-import { ModalContainer } from "./ModalStyled";
+import React from "react";
+import styles from "./styles.module.scss";
+import { createPortal } from "react-dom";
+import { useDispatch } from "react-redux";
+import { taggleModal } from "../../redux/cart/cartActions";
+import { useEffect } from "react";
 
-class Modal extends Component {
-  componentDidMount() {
-    window.addEventListener("keydown", this.handleEsc);
+const Modal = ({ children }) => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+
+    window.addEventListener("keydown", handleEsc);
     const body = document.querySelector("body");
     body.style.overflow = "hidden";
-  }
 
-  componentWillUnmount() {
-    window.removeEventListener("keydown", this.handleEsc);
-    const body = document.querySelector("body");
-    body.style.overflow = "auto";
-  }
+    return () => {
+      window.removeEventListener("keydown", handleEsc);
+      const body = document.querySelector("body");
+      body.style.overflow = "auto";
+    };
+  });
 
-  handleEsc = (e) => {
-    if (e.code === "Escape") {
-      this.props.hideModal();
+  const handleEsc = (evt) => {
+    if (evt.code === "Escape") {
+      dispatch(taggleModal());
     }
   };
-  onHandleClick = () => {
-    this.props.hideModal();
-  };
-  handleBackdropClick = (e) => {
-    if (e.target !== e.currentTarget) return;
-    this.props.hideModal();
+
+  const handleBackdropClick = (evt) => {
+    if (evt.target !== evt.currentTarget) return;
+    dispatch(taggleModal());
   };
 
-  render() {
-    return (
-      <ModalContainer onClick={this.handleBackdropClick}>
-        <div className='modal'>{this.props.children}</div>
-      </ModalContainer>
-    );
-  }
-}
+  const modalRoot = document.querySelector("#modal-root");
+  return createPortal(
+    <div className={styles.Overlay} onClick={handleBackdropClick}>
+      <h2>Ваш заказ</h2>
+      <div className={styles.Modal}>
+        <button
+          type="button"
+          className={styles.closeModal}
+          onClick={() => dispatch(taggleModal())}
+        > X
+        </button>
+        {children}
+      </div>
+    </div>,
+    modalRoot
+  );
+};
 
 export default Modal;

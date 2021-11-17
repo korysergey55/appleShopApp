@@ -4,7 +4,7 @@ import { taggleModal } from "../../redux/cart/cartActions";
 import { cartItemSelector, cartTotalPricelSelector } from "../../redux/cart/cartSelectors";
 import { remuveAllFromCartOperation } from "../../redux/cart/cartOperations";
 
-import CartListItem from "./cartListItem/CartListItem";
+import CartItem from "./cartItem/CartItem";
 import styles from "./styles.module.scss";
 
 
@@ -19,11 +19,12 @@ const Cart = () => {
         <>
           <ul className={styles.list}>
             {cartItems.map((product) => (
-              <CartListItem key={product.id} product={product} />
+              <CartItem key={product.id} product={product} />
             ))}
           </ul>
+          
           <div className={styles.totalContainer}>
-            <h3 className={styles.title}>Total price in order:</h3>
+            <h3 className={styles.title}>Total price:</h3>
             <p className={styles.price}>
               {totalPriceInOrder} <span className={styles.priceSpan}>грн</span>
             </p>
@@ -37,7 +38,7 @@ const Cart = () => {
             <button
               type="button"
               onClick={() => dispatch(remuveAllFromCartOperation())}
-              className={styles.remuveOrderButton}
+              className={styles.remuveButton}
             >
               Remuve all
             </button>

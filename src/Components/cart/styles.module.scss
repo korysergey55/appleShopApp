@@ -1,3 +1,5 @@
+@import '../../sourses/styles/variables.scss';
+
 .container {
   display: flex;
   flex-direction: column;
@@ -11,59 +13,49 @@
     display: flex;
     flex-direction: column;
     list-style: none;
-    border-bottom: 2px solid #819ff5;
     width: 100%;
+    border-bottom: 2px solid $brandColor;
   }
-}
-.totalContainer {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 5px 0;
-  width: 100%;
-  .title {
-    font-size: 25px;
-    font-weight: 700;
-    color: #2b63ff;
-  }
-  .price {
-    font-size: 25px;
-    font-weight: 700;
-    color: #2b63ff;
-  }
-}
-.orderButton {
-  margin-top: 10px;
-  min-width: 150px;
-  font-weight: 800;
-  font-size: 15px;
-  background-color: rgb(104, 253, 5);
-  color: black;
-  box-shadow: 1px 1px 1px 1px #313030;
-}
-.orderButton:hover {
-  background-color: rgb(104, 253, 5);
-  color: rgb(8, 71, 243);
-}
-.remuveOrderButton {
-  margin-top: 10px;
-  min-width: 150px;
+  .totalContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 5px 0;
 
-  font-weight: 800;
-  font-size: 15px;
-  box-shadow: 1px 1px 1px 1px #313030;
-  color: black;
-}
-.remuveOrderButton:hover {
-  background-color: rgb(248, 57, 57);
-  color: white;
-}
-@media (min-width: 768px) {
-}
+    .title {
+      margin-right: 10px;
+      font-size: 25px;
+      font-weight: 700;
+      color: $brandColor;
+    }
+    .price {
+      margin-right: 10px;
+      font-size: 25px;
+      font-weight: 700;
+      color: $brandColor;
+    }
+    .orderButton {
+      min-width: 150px;
+      margin-top: 10px;
+      margin-right: 10px;
 
-@media (min-width: 1024px) {
-  .totalInfo {
-    padding-bottom: 60px;
-    padding-top: 20px;
+      font-size: 15px;
+      font-weight: 800;
+      border: none;
+      background-color: rgb(104, 253, 5);
+      color: black;
+      box-shadow: 1px 1px 1px 1px #313030;
+    }
+    .remuveButton {
+      margin-top: 10px;
+      min-width: 150px;
+      font-weight: 800;
+      font-size: 15px;
+      box-shadow: 1px 1px 1px 1px #313030;
+      background-color: rgb(248, 57, 57);
+      color: white;
+    }
   }
 }
