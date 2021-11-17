@@ -1,0 +1,29 @@
+@import '../../../sourses/styles/variables.scss';
+
+.item {
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 20px;
+  list-style: none;
+
+  .link {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $brandColor;
+
+    &:hover {
+      color: $activeColor;
+    }
+    .cartLength {
+      color: rgb(243, 243, 142);
+      position: absolute;
+      top: -21%;
+      left: 104%;
+    }
+  }
+  .linkActive {
+    color: $activeColor;
+  }
+}
