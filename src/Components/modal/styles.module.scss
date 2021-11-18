@@ -25,8 +25,9 @@
 .closeModal {
   position: absolute;
   top: 10px;
-  left: 20px;
-  margin-left: 88%;
+  left: 90%;
+  // margin-right: auto;
+  //  margin-right: 0;
   border-radius: 50%;
   background-color: red;
 }

@@ -13,7 +13,7 @@ const registerReducer = createReducer(null, {
 });
 
 const tokenReducer = createReducer(null, {
- [loginUserAction]: (state, action) => action.payload.idToken,
+ [loginUserAction]: (state, action) => action.payload,
  [logoutUserAction]: (state, action) => null,
 });
 

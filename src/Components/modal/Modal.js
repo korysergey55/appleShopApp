@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { taggleModal } from "../../redux/cart/cartActions";
 import { useEffect } from "react";
 
-const Modal = ({ children }) => {
+const Modal = ({ children, title = 'title' }) => {
   const dispatch = useDispatch();
   useEffect(() => {
 
@@ -34,7 +34,7 @@ const Modal = ({ children }) => {
   const modalRoot = document.querySelector("#modal-root");
   return createPortal(
     <div className={styles.Overlay} onClick={handleBackdropClick}>
-      <h2>Ваш заказ</h2>
+      <h2>{title}</h2>
       <div className={styles.Modal}>
         <button
           type="button"

@@ -1,6 +1,7 @@
 import React from "react";
-import AuthForm from "../../Components/auth/AuthForm";
+import LoginForm from "../../Components/auth/LoginForm";
 import Header from '../../containers/header/Header'
+import Section from "../../containers/section/Section";
 import styles from './styles.module.scss'
 
 const AuthPage = () => {
@@ -8,7 +9,9 @@ const AuthPage = () => {
     <div className={styles.authPage}>
       <Header />
       <div className={styles.container}>
-        <AuthForm />
+        <Section title='Login with:'>
+          <LoginForm />
+        </Section>
       </div>
     </div>
   );

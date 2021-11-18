@@ -21,19 +21,21 @@ const CartPage = () => {
   }, [dispatch, cartItems, openModal]);
 
   useEffect(() => {
-    if (cartItems === 0){
+    if (cartItems === 0) {
       dispatch(openModal());
     }
   }, [dispatch, cartItems]);
-  console.log(cartItems)
+
   return (
     <div className={styles.cartPage}>
       <Header />
-      <Section title="Cart">
+      <Section title="Cart-page">
         <Cart />
-        {openModal ? <Modal children={<CartOrder />} /> : null}
+        {openModal ? <Modal title={'Ваш заказ'}>
+          <CartOrder />
+        </Modal> : null}
       </Section>
-    </div>
+    </div >
   );
 };
 

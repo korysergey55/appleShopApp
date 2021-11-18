@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { logoutUserOperation } from "../../redux/auth/authOperations";
 import { authTokenSelector } from '../../redux/auth/authSelectors';
 import styles from './styles.module.scss'
-
+import Logo from '../Logo/Logo'
 const Header = () => {
   const history = useHistory();
   const token = useSelector(authTokenSelector);
@@ -18,6 +18,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
+        <Logo />
         <h2 className={styles.title} onClick={() => history.push(pathes.products)}> Apple-Shop</h2>
         <ul className={styles.navigationList}>
           {mainRoutes.map((route) => (
