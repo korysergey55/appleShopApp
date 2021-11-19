@@ -1,16 +1,27 @@
 @import '../../sourses/styles/variables.scss';
 
-.filterLabel {
-  margin-right: 10px;
-  margin-left: 10px;
-  font-size: 25px;
-  font-weight: 700;
-  color: $brandColor;
-}
-.filterInput {
-  padding: 5px;
-  margin-left: 20px;
-  font-size: 20px;
-  border-radius: 10px;
-  border: 2px solid $brandColor;
+.container {
+  margin: 0 auto;
+  padding: 10px;
+  .label {
+    margin-left: 20px;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    color: $brandColor;
+  }
+  .input {
+    padding: 5px;
+    margin-left: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 2px solid $brandColor;
+    outline: none;
+
+    &:focus {
+      border: none;
+      outline: none;
+      outline: 2px solid rgb(0, 190, 0);
+    }
+  }
 }

@@ -1,9 +1,12 @@
+@import '../../sourses/styles/variables.scss';
+
 .list {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   margin: 0 auto;
+  padding: 10px;
   font-size: 30px;
   font-weight: 900;
   text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.48);
@@ -23,8 +26,8 @@
       }
     }
     .navLinkActive {
-      color: #0077ff;
-      fill: #0077ff;
+      color: $brandColor;
+      fill: $brandColor;
     }
   }
 }
