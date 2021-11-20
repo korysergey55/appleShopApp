@@ -56,7 +56,7 @@ export const mainRoutes = [
   {
     name: "Registration",
     path: "/registration",
-    component: lazy(() => import("../pages/authPage/AuthPage")),
+    component: lazy(() => import("../pages/auth/registrationPage/RegistrationPage")),
     exact: true,
     isRestricted: true,
     isPrivate: false,
@@ -64,7 +64,7 @@ export const mainRoutes = [
   {
     name: "Login",
     path: "/login",
-    component: lazy(() => import("../pages/authPage/AuthPage")),
+    component: lazy(() => import("../pages/auth/loginPage/LoginPage.js")),
     exact: true,
     isRestricted: true,
     isPrivate: false,

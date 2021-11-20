@@ -18,8 +18,10 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <Logo />
-        <h2 className={styles.title} onClick={() => history.push(pathes.products)}> Apple-Shop</h2>
+        <div className={styles.wripper} onClick={() => history.push(pathes.products)}>
+          <Logo />
+          <h2 className={styles.title} > Apple-Shop</h2>
+        </div>
         <ul className={styles.navigationList}>
           {mainRoutes.map((route) => (
             <HeaderList route={route} token={token} key={route.name} />

@@ -15,12 +15,17 @@
   margin: 0 auto;
   padding: 10px 15px;
 
-  .title {
-    margin-left: 10px;
-    margin-bottom: 5px;
-    font-size: 25px;
-    color: white;
+  .wripper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    .title {
+      margin-left: 10px;
+      margin-bottom: 5px;
+      font-size: 25px;
+      color: white;
+    }
     &:hover {
       cursor: pointer;
     }
