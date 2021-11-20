@@ -7,9 +7,12 @@ import { logoutUserOperation } from "../../redux/auth/authOperations";
 import { authTokenSelector } from '../../redux/auth/authSelectors';
 import HeaderList from "./headerList/HeaderList";
 
-
 import styles from './styles.module.scss'
 import Logo from '../Logo/Logo'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSignOutAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faGoogle } from '@fortawesome/free-brands-svg-icons'
+
 const Header = () => {
   const history = useHistory();
   const token = useSelector(authTokenSelector);
@@ -36,6 +39,7 @@ const Header = () => {
                 activeClassName={styles.linkActive}
               >
                 Logout
+                {/* <FontAwesomeIcon className={styles.icon} icon={faSignOutAlt} color="white" size="2x" /> */}
               </NavLink>
             </li>
           )}

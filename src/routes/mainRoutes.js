@@ -1,7 +1,6 @@
 import { lazy } from "react";
 import IconComponent from "../containers/IconComponent/IconComponent";
 
-
 export const mainRoutes = [
   {
     name: "Home",
@@ -30,7 +29,7 @@ export const mainRoutes = [
   {
     name: "Contacts",
     path: "/contacts",
-    component: lazy(()=>import('../pages/contactsPage/contactsPage')),
+    component: lazy(() => import('../pages/contactsPage/contactsPage')),
     exact: false,
     isRestricted: false,
     isPrivate: false,
@@ -54,7 +53,7 @@ export const mainRoutes = [
     isPrivate: true,
   },
   {
-    name: "Registration",
+    name: "",
     path: "/registration",
     component: lazy(() => import("../pages/auth/registrationPage/RegistrationPage")),
     exact: true,

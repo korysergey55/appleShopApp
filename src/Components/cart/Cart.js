@@ -22,32 +22,37 @@ const Cart = () => {
               <CartItem key={product.id} product={product} />
             ))}
           </ul>
-          
+
           <div className={styles.totalContainer}>
-            <h3 className={styles.title}>Total price:</h3>
-            <p className={styles.price}>
-              {totalPriceInOrder} <span className={styles.priceSpan}>грн</span>
-            </p>
-            <button
-              type="button"
-              onClick={() => dispatch(taggleModal())}
-              className={styles.orderButton}
-            >
-              Bay
-            </button>
-            <button
-              type="button"
-              onClick={() => dispatch(remuveAllFromCartOperation())}
-              className={styles.remuveButton}
-            >
-              Remuve all
-            </button>
+            <div className={styles.titleWripper} >
+              <h3 className={styles.title}>Total price:</h3>
+              <p className={styles.price}>
+                {totalPriceInOrder} <span className={styles.priceSpan}>грн</span>
+              </p>
+            </div>
+            <div className={styles.btnWripper}>
+              <button
+                type="button"
+                onClick={() => dispatch(taggleModal())}
+                className={styles.orderButton}
+              >
+                Bay
+              </button>
+              <button
+                type="button"
+                onClick={() => dispatch(remuveAllFromCartOperation())}
+                className={styles.remuveButton}
+              >
+                Remuve all
+              </button>
+            </div>
           </div>
         </>
       ) : (
         <p>Cart is empty!</p>
-      )}
-    </div>
+      )
+      }
+    </div >
   );
 };
 export default Cart;
