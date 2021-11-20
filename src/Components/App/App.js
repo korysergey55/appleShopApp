@@ -1,8 +1,9 @@
 import React, { Suspense } from "react";
 import { Switch } from "react-router-dom";
+import { mainRoutes } from "../../routes/mainRoutes";
 import { useSelector } from "react-redux";
 import { authTokenSelector } from "../../redux/auth/authSelectors";
-import { mainRoutes } from "../../routes/mainRoutes";
+import { ToastContainer } from 'react-toastify'
 import PrivateRoute from "../../routes/PrivateRoute";
 import PublicRoute from "../../routes/PublicRoute";
 import Loader from "../../containers/Loader/Loader";
@@ -36,6 +37,7 @@ const App = () => {
             )
           )}
         </Switch>
+        <ToastContainer />
       </Suspense>
     </div>
   );

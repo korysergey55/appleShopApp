@@ -18,7 +18,6 @@ const LoginForm = () => {
   const dispath = useDispatch()
 
   const loginGoogle = async (e) => {
-    console.log('loginGoogle')
     const res = await signInWithGoogle()
     if (res) {
       dispath(loginUserAction(res.credential.accessToken))

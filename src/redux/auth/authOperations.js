@@ -13,7 +13,7 @@ import {
 } from "./authActions";
 import Notification from "../../utils/notify";
 
-
+import { logout } from '../../utils/Firebase/firebase'
 
 
 export const registrationUserOperation =
@@ -42,16 +42,13 @@ export const loginUserOperation =
     }
   };
 
-export const logoutUserOperation = (token, history) => async (dispatch, getState) => {
-  //  const authToken = getState().auth.token;
+export const logoutUserOperation = () => async (dispatch) => {
   try {
-    await logoutApi(token);
+    await logout();
     dispatch(logoutUserAction());
-    Notification("logoutSuccess");
-    history.push('login')
+    history.push('/login')
 
   } catch (error) {
     dispatch(logoutUserActionError(error.message));
-    Notification("error");
   }
 };
