@@ -1,12 +1,8 @@
 import axios from "axios";
-
-// const baseURL = "https://react-shop-5c360-default-rtdb.firebaseio.com/"; //korysergey55@gmail.com
-// const baseURL = "https://criptoshop-62529-default-rtdb.firebaseio.com/"; //korysergeyDev@gmail.com
 // REACT_APP_BASE_URL = https://criptoshop-62529-default-rtdb.firebaseio.com/ //env korysergeyDev@gmail.com
 // REACT_APP_API_KEY = AIzaSyBWUe5DycXWIqiLuoM_--zJGO5qLfUwhkU // env korysergeyDev@gmail.com
 
-// API_KEY AIzaSyAADYypCDfRfFwciAHHzne5jN9KfL5j2d4  //olgakoritsk@gmail.com
-const baseURL = "https://appleshop-504a0-default-rtdb.firebaseio.com/"  //olgakoritsk@gmail.com
+const baseURL = "https://criptoshop-62529-default-rtdb.firebaseio.com/"
 
 export const getAllAdvByCategoryApi = async (category) => {
  try {

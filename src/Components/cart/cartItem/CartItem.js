@@ -1,10 +1,8 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { removeFromCartByID } from "../../../redux/cart/cartActions";
-import Notification from "../../../utils/notify";
 
 import styles from "./styles.module.scss";
-import sprite from "../../../sourses/icons/productsSprite.svg";
 
 const CartListItem = ({ product }) => {
   const { name, price, id, image } = product;
@@ -12,7 +10,6 @@ const CartListItem = ({ product }) => {
   const dispatch = useDispatch();
   const removeFromCart = () => {
     dispatch(removeFromCartByID(id))
-    Notification("removeFromCart");
   };
 
   return (

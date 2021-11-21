@@ -1,6 +1,5 @@
 import React from "react";
 import { IpadLi} from './IpadListItemStyled'
-import Notification from "../../../../utils/notify";
 
 import { useDispatch } from "react-redux";
 import {
@@ -19,8 +18,7 @@ const IpadListItem = ({ ipad }) => {
 
   const addProduct = () => {
     dispatch(addToCart(ipad));
-    Notification("addProductToCartSuccess");
-  };
+      };
 
   const openDetails = () => {
     history.push({

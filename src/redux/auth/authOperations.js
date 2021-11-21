@@ -11,10 +11,8 @@ import {
   logoutUserAction,
   logoutUserActionError,
 } from "./authActions";
-import Notification from "../../utils/notify";
 
 import { logout } from '../../utils/Firebase/firebase'
-
 
 export const registrationUserOperation =
   (InputFormState, history) => async (dispatch) => {
@@ -22,10 +20,9 @@ export const registrationUserOperation =
       const response = await registrationUserApi(InputFormState);
       dispatch(registerUserAction(response.data));
       history.push("/login");
-      Notification("registrationSuccess");
     } catch (error) {
       dispatch(registerUserActionError(error.message));
-      Notification("error");
+
     }
   };
 
@@ -35,10 +32,10 @@ export const loginUserOperation =
       const response = await loginUserApi(InputFormState);
       dispatch(loginUserAction(response.data));
       history.push("/shop");
-      Notification("loginSuccess");
+
     } catch (error) {
       dispatch(loginUserActionError(error.message));
-      Notification("error");
+
     }
   };
 

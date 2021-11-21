@@ -10,7 +10,7 @@ import HeaderList from "./headerList/HeaderList";
 import styles from './styles.module.scss'
 import Logo from '../Logo/Logo'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSignOutAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
 import { faGoogle } from '@fortawesome/free-brands-svg-icons'
 
 const Header = () => {
@@ -38,8 +38,7 @@ const Header = () => {
                 className={styles.link}
                 activeClassName={styles.linkActive}
               >
-                Logout
-                {/* <FontAwesomeIcon className={styles.icon} icon={faSignOutAlt} color="white" size="2x" /> */}
+                <FontAwesomeIcon className={styles.icon} icon={faSignOutAlt} color="white" size="2x" />
               </NavLink>
             </li>
           )}

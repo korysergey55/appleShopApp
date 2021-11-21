@@ -1,6 +1,5 @@
 import React from "react";
 import { AppleWatchLi } from './styled'
-import Notification from "../../../../utils/notify";
 
 import { useDispatch } from "react-redux";
 import {
@@ -19,7 +18,6 @@ const AppleWatchListItem = ({ watch }) => {
 
   const addProduct = () => {
     dispatch(addToCart(watch));
-    Notification("addProductToCartSuccess");
   };
 
   const openDetails = () => {

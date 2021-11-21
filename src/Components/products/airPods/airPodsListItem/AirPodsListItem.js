@@ -1,6 +1,5 @@
 import React from "react";
 import { AirPodsLi} from './styled'
-import Notification from "../../../../utils/notify";
 import { useDispatch } from "react-redux";
 import {
   useHistory,
@@ -18,8 +17,7 @@ const AirPodsListItem = ({ airPod }) => {
 
   const addProduct = () => {
     dispatch(addToCart(airPod));
-    Notification("addProductToCartSuccess");
-  };
+      };
 
   const openDetails = () => {
     history.push({

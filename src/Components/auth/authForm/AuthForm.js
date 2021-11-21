@@ -8,7 +8,6 @@ import { Form, Input, Button, Checkbox } from 'antd'
 import styles from './styles.module.scss'
 
 
-
 const AuthForm = ({ title, titleSubmit, login = true }) => {
   const history = useHistory()
   const dispath = useDispatch()

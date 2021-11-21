@@ -11,7 +11,7 @@ import AuthForm from '../authForm/AuthForm';
 
 import styles from './styles.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSignOutAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faGoogle, faFacebookF } from '@fortawesome/free-brands-svg-icons'
 import ModalAnt from '../../modalAnt/ModalAnt'
 
@@ -39,7 +39,6 @@ const LoginForm = () => {
   const loginWithEmail = () => {
     dispath(setModalAntAction())
   }
-
 
   return (
     <div >

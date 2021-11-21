@@ -1,7 +1,5 @@
 import React from "react";
-import LoginForm from "../../../Components/auth/loginForm/LoginForm";
 import Header from '../../../containers/header/Header'
-import Section from "../../../containers/section/Section";
 import AuthForm from "../../../Components/auth/authForm/AuthForm";
 import styles from './styles.module.scss'
 

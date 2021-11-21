@@ -2,7 +2,6 @@ import React from "react";
 import { AdvFormContainer } from "./AdvFormStyled";
 import { createNewAdvApi } from "../../services/api";
 import { useState } from "react";
-import Notification from "../../utils/notify";
 
 const productCategories = [
   "phones",
@@ -36,7 +35,6 @@ const AdvForm = () => {
   const onHandleSubmit = (evt) => {
     evt.preventDefault();
     createNewAdvApi(state.category, { ...state });
-    Notification("addProductToCartSuccess");
     setState({ ...initialState });
   };
 

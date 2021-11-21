@@ -12,14 +12,12 @@ import "./index.css";
 import './sourses/styles/styles.scss'
 import 'antd/dist/antd.css'
 import "video-react/dist/video-react.css";
-import "react-notifications-component/dist/theme.css";
-import ReactNotification from "react-notifications-component";
+
 
 ReactDOM.render(
   <Provider store={store}>
     <PersistGate loading={<p>Loading...</p>} persistor={persistor}>
       <BrowserRouter>
-        <ReactNotification />
         <App />
       </BrowserRouter>
     </PersistGate>

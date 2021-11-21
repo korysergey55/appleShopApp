@@ -9,7 +9,7 @@ import {
   withRouter,
 } from "react-router-dom";
 import { addToCart } from "../../../../redux/cart/cartActions";
-import Notification from "../../../../utils/notify";
+
 
 const LaptopListItem = ({ laptop }) => {
   const dispatch = useDispatch();
@@ -19,7 +19,6 @@ const LaptopListItem = ({ laptop }) => {
 
   const addProduct = () => {
     dispatch(addToCart(laptop));
-    Notification("addProductToCartSuccess");
   };
 
   const openDetails = () => {
