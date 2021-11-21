@@ -1,0 +1,1 @@
+export const modalAntSelector = (state)=> state.antModal.modal

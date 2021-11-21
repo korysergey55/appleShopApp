@@ -31,9 +31,9 @@ const CartPage = () => {
       <Header />
       <Section title="Cart-page">
         <Cart />
-        {openModal ? <Modal title={'Ваш заказ'}>
+        {openModal && <Modal title={'Ваш заказ'}>
           <CartOrder />
-        </Modal> : null}
+        </Modal>}
       </Section>
     </div >
   );

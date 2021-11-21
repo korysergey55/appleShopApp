@@ -1,0 +1,43 @@
+@import '../../../sourses/styles/variables.scss';
+
+.formContainer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 15px;
+  // border: 1px solid $brandColor;
+  border-radius: 7px;
+
+  .title {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    color: $brandColor;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .form {
+    display: block;
+    max-width: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .forgotPassword {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 10px;
+      font-weight: 600;
+      text-align: center;
+      color: $activeColor2;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

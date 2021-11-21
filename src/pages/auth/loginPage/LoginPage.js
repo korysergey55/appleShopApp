@@ -4,7 +4,6 @@ import LoginForm from "../../../Components/auth/loginForm/LoginForm";
 import Header from '../../../containers/header/Header'
 import styles from './styles.module.scss'
 import { useHistory } from "react-router";
-useHistory
 
 const LoginPage = () => {
   const history = useHistory()

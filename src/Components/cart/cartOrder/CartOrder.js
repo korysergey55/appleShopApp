@@ -11,7 +11,7 @@ import styles from './styles.module.scss'
 const CartOrder = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector(cartItemSelector);
-  const totalPriceInOrder = useSelector(cartTotalPricelSelector);
+  const totalPrice = useSelector(cartTotalPricelSelector);
 
   return (
     <div className={styles.container}>
@@ -23,7 +23,7 @@ const CartOrder = () => {
       </ul>
       <div className={styles.wripper}>
         <h2 className={styles.total}>
-          Total price: {totalPriceInOrder} грн{" "}
+          Total price: {totalPrice} грн{" "}
         </h2>
         <button
           className={styles.orderButton}

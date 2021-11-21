@@ -1,11 +1,12 @@
-import { combineReducers } from "redux";
-import authReducer from "./auth/authReducers";
-import cartReducer from "./cart/cartReducer";
-import FilterReducer from "./filter/filterReducer";
-import productsReducer from "./products/productsReducer";
+import { combineReducers } from "redux"
+import authReducer from "./auth/authReducers"
+import cartReducer from "./cart/cartReducer"
+import FilterReducer from "./filter/filterReducer"
+import productsReducer from "./products/productsReducer"
+import antModal from './antModal/antModalReducers'
 // ----------persist-----------------//
-import { persistReducer } from "redux-persist";
-import storage from "redux-persist/lib/storage";
+import { persistReducer } from "redux-persist"
+import storage from "redux-persist/lib/storage"
 
 const persistCartConfig = {
     key: "cart",
@@ -24,6 +25,7 @@ const rootReducer = combineReducers({
     cart: persistReducer(persistCartConfig, cartReducer),
     products: productsReducer,
     filter: FilterReducer,
+    antModal,
 });
 
 export default rootReducer;
