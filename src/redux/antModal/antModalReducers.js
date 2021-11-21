@@ -1,6 +1,6 @@
 import { createReducer } from "@reduxjs/toolkit"
 import { combineReducers } from "redux";
-import { setModalAntAction, setModalCloseAntAction, setModalAntError } from './antModalActions'
+import { setModalAntAction,  setModalAntErrorAction } from './antModalActions'
 
 
 const antModalReducer = createReducer(false, {
@@ -8,7 +8,7 @@ const antModalReducer = createReducer(false, {
 })
 
 const antModalError = createReducer(null, {
-  [setModalAntError]: (state, action) => action.payload,
+  [setModalAntErrorAction]: (state, action) => action.payload,
 })
 
 const antModal = combineReducers({

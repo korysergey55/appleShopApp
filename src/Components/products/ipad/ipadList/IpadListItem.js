@@ -8,7 +8,7 @@ import {
   useRouteMatch,
   withRouter,
 } from "react-router-dom";
-import { addToCart } from "../../../../redux/cart/cartActions";
+import { addToCartOperation } from "../../../../redux/cart/cartOperations";
 
 const IpadListItem = ({ ipad }) => {
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ const IpadListItem = ({ ipad }) => {
   const match = useRouteMatch();
 
   const addProduct = () => {
-    dispatch(addToCart(ipad));
+    dispatch(addToCartOperation(ipad));
       };
 
   const openDetails = () => {

@@ -6,4 +6,5 @@ export const pathes = {
   login: '/login',
   cart: '/cart',
   contacts: '/contacts',
+  order: '/order',
 }

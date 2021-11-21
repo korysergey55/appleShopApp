@@ -12,6 +12,7 @@ import "./index.css";
 import './sourses/styles/styles.scss'
 import 'antd/dist/antd.css'
 import "video-react/dist/video-react.css";
+import 'react-toastify/dist/ReactToastify.css'
 
 
 ReactDOM.render(

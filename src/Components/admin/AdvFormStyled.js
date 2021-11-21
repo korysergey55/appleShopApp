@@ -14,7 +14,7 @@ export const AdvFormContainer = styled.div`
   .advFormInput {
     border: 1px solid #819ff5;
     height: 30px;
-    border-radius: 14px;
+    border-radius: 7px;
     padding-left: 10px;
     margin: 5px 0;
     font-size: 14px;

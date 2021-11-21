@@ -44,6 +44,16 @@ export const mainRoutes = [
     cartLength: null,
     cart: true,
   },
+
+  {
+    name: '',
+    path: "/order",
+    component: lazy(() => import("../pages/orderPage/OrderPage")),
+    exact: true,
+    isRestricted: false,
+    isPrivate: false,
+    cartLength: null,
+  },
   {
     name: "Administration",
     path: "/admin",

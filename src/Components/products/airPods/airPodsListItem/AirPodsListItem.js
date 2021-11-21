@@ -1,5 +1,5 @@
 import React from "react";
-import { AirPodsLi} from './styled'
+import { AirPodsLi } from './styled'
 import { useDispatch } from "react-redux";
 import {
   useHistory,
@@ -7,7 +7,7 @@ import {
   useRouteMatch,
   withRouter,
 } from "react-router-dom";
-import { addToCart } from "../../../../redux/cart/cartActions";
+import { addToCartOperation } from "../../../../redux/cart/cartOperations";
 
 const AirPodsListItem = ({ airPod }) => {
   const dispatch = useDispatch();
@@ -16,8 +16,8 @@ const AirPodsListItem = ({ airPod }) => {
   const match = useRouteMatch();
 
   const addProduct = () => {
-    dispatch(addToCart(airPod));
-      };
+    dispatch(addToCartOperation(airPod));
+  };
 
   const openDetails = () => {
     history.push({

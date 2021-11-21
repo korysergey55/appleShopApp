@@ -8,7 +8,7 @@ import {
 import { getProductWithIdSelector } from "../../redux/products/productsSelectors";
 import { useDispatch, useSelector } from "react-redux";
 import { getProductByIdOperation } from "../../redux/products/productsOperations";
-import { addToCartOperation, bayNowOperation } from "../../redux/cart/cartOperations";
+import { addToCartOperation } from "../../redux/cart/cartOperations";
 import styles from './styles.module.scss'
 
 const ProductItemDetails = () => {
@@ -56,7 +56,7 @@ const ProductItemDetails = () => {
                 <span className={styles.withoutSale}>{(productById.price - productById.price / 10).toFixed(0)}</span>{" "}
               </>
             ) : (
-                <span className={styles.withoutSale}>{productById.price}</span>
+              <span className={styles.withoutSale}>{productById.price}</span>
             )}
             {" грн"}
           </p>

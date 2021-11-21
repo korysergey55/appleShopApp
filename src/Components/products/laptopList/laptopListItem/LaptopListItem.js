@@ -8,7 +8,7 @@ import {
   useRouteMatch,
   withRouter,
 } from "react-router-dom";
-import { addToCart } from "../../../../redux/cart/cartActions";
+import { addToCartOperation } from "../../../../redux/cart/cartOperations";
 
 
 const LaptopListItem = ({ laptop }) => {
@@ -18,7 +18,7 @@ const LaptopListItem = ({ laptop }) => {
   const match = useRouteMatch();
 
   const addProduct = () => {
-    dispatch(addToCart(laptop));
+    dispatch(addToCartOperation(laptop));
   };
 
   const openDetails = () => {

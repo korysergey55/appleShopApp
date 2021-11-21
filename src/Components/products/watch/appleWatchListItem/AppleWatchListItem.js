@@ -8,7 +8,7 @@ import {
   useRouteMatch,
   withRouter,
 } from "react-router-dom";
-import { addToCart } from "../../../../redux/cart/cartActions";
+import { addToCartOperation } from "../../../../redux/cart/cartOperations";
 
 const AppleWatchListItem = ({ watch }) => {
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ const AppleWatchListItem = ({ watch }) => {
   const match = useRouteMatch();
 
   const addProduct = () => {
-    dispatch(addToCart(watch));
+    dispatch(addToCartOperation(watch));
   };
 
   const openDetails = () => {

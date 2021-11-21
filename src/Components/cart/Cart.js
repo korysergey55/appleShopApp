@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { taggleModal } from "../../redux/cart/cartActions";
 import { cartItemSelector, cartTotalPricelSelector } from "../../redux/cart/cartSelectors";
@@ -6,9 +7,11 @@ import { remuveAllFromCartOperation } from "../../redux/cart/cartOperations";
 
 import CartItem from "./cartItem/CartItem";
 import styles from "./styles.module.scss";
+import { pathes } from "../../utils/pathes";
 
 
 const Cart = () => {
+  const history = useHistory()
   const dispatch = useDispatch();
   const cartItems = useSelector(cartItemSelector);
   const totalPriceInOrder = useSelector(cartTotalPricelSelector);
@@ -33,10 +36,10 @@ const Cart = () => {
             <div className={styles.btnWripper}>
               <button
                 type="button"
-                onClick={() => dispatch(taggleModal())}
+                onClick={() => history.push(pathes.order)}
                 className={styles.orderButton}
               >
-                Bay
+                Create Order
               </button>
               <button
                 type="button"
