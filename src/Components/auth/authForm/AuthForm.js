@@ -106,7 +106,7 @@ const AuthForm = ({ title, titleSubmit, login = true }) => {
             className={styles.forgotPassword}
             type="button"
             onClick={() => {
-              history.push(pathes.resetPassword)
+              history.push(pathes.reset)
             }}
           >
             Forgot Password?

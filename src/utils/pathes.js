@@ -2,9 +2,10 @@ export const pathes = {
   home: "/",
   shop: 'shop',
   products: '/products',
+  cart: '/cart',
+  order: '/order',
+  contacts: '/contacts',
   registration: '/registration',
   login: '/login',
-  cart: '/cart',
-  contacts: '/contacts',
-  order: '/order',
+  reset: '/reset',
 }

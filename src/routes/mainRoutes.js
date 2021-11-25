@@ -79,6 +79,14 @@ export const mainRoutes = [
     isPrivate: false,
   },
   {
+    name: "",
+    path: "/reset",
+    component: lazy(() => import('../pages/auth/resetPage/ResetPage')),
+    exact: true,
+    isRestricted: false,
+    isPrivate: false,
+  },
+  {
     name: "profile",
     path: "/profile",
     component: "",
@@ -95,3 +103,5 @@ export const mainRoutes = [
     iisRestricted: false,
   },
 ];
+
+

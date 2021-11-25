@@ -27,7 +27,7 @@ const Cart = () => {
           </ul>
 
           <div className={styles.totalContainer}>
-            <div className={styles.titleWripper} >
+            <div className={styles.wripperTitle} >
               <h3 className={styles.title}>Total price:</h3>
               <p className={styles.price}>
                 {totalPriceInOrder} <span className={styles.priceSpan}>грн</span>
@@ -52,7 +52,7 @@ const Cart = () => {
           </div>
         </>
       ) : (
-        <p>Cart is empty!</p>
+        <h2 className={styles.titleEmpty}>Cart is empty!</h2>
       )
       }
     </div >

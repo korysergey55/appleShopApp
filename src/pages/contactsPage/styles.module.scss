@@ -1,17 +1,19 @@
 @import '../../sourses/styles/variables.scss';
 
 .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
-  background-image: url('');
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: contain;
-
-  .title {
-    margin-bottom: 20px;
-    font-size: 35px;
-    color: $brandColor;
-    text-align: center;
-    text-shadow: $textShadow;
-  }
+  max-width: 1112px;
+  margin: 0 auto;
+  padding: 50px 15px;
+}
+.title {
+  margin-bottom: 20px;
+  font-size: 35px;
+  color: $brandColor;
+  text-align: center;
+  text-shadow: $textShadow;
 }

@@ -24,7 +24,7 @@
     width: 100%;
     padding: 30px 0;
 
-    .titleWripper {
+    .wripperTitle {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -65,5 +65,12 @@
         color: white;
       }
     }
+  }
+  .titleEmpty {
+    margin-bottom: 0;
+    margin-right: 10px;
+    font-size: 25px;
+    font-weight: 700;
+    color: $brandColor;
   }
 }

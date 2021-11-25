@@ -1,0 +1,61 @@
+@import '../../../sourses/styles/variables.scss';
+
+.reachUs {
+  width: 100%;
+  max-width: 300px;
+  min-height: 660px;
+  padding: 25px 25px;
+  background-color: $brandBgColor;
+
+  .title {
+    margin-bottom: 20px;
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 75px;
+    text-align: left;
+    color: #f6fafb;
+  }
+  .discription {
+    margin-bottom: 34px;
+    font-family: Barlow;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 28px;
+    text-align: left;
+    color: #f6fafb;
+  }
+  .list {
+    padding-left: 0;
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: top;
+      list-style: none;
+
+      .icon {
+        min-width: 43px;
+      }
+      .liContainer {
+        margin-left: 30px;
+        .subtitle {
+          margin-bottom: 23px;
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 32px;
+          text-align: left;
+          color: #f6fafb;
+        }
+        .text {
+          display: block;
+          max-width: 190px;
+          margin-bottom: 10px;
+          font-family: Barlow;
+          font-size: 20px;
+          font-weight: 300;
+          text-align: left;
+          color: #f6fafb;
+        }
+      }
+    }
+  }
+}

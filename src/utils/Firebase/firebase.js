@@ -1,6 +1,6 @@
 import firebase from 'firebase'
 import { toast } from 'react-toastify'
-
+import { pathes } from '../pathes'
 
 let configKorySergey = {
   apiKey: process.env.REACT_APP_WEB_API_KEY,
@@ -82,12 +82,15 @@ const registerWithEmailAndPassword = async (name, email, password) => {
     })
   }
 }
-const sendPasswordResetEmail = async email => {
+const sendPasswordResetEmail = async (email, history) => {
   try {
     const res = await auth.sendPasswordResetEmail(email)
     toast('Password reset link sent! Check your email!', {
       theme: 'colored',
     })
+    if (res) {
+      history.push(pathes.home)
+    }
   } catch (err) {
     console.error(err)
     toast.error(`${err.message}`, {
