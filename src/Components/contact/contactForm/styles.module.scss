@@ -2,12 +2,12 @@
 
 .contactForm {
   width: 100%;
-  // margin: 0 auto;
-  max-width: 700px;
-  min-height: 660px;
-  // margin-bottom: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 40px;
+  border-radius: 7px;
   background-color: #f6fafb;
+  border: 1px solid $brandBgColor;
 
   .formTitle {
     font-size: 45px;
@@ -21,7 +21,7 @@
 //  Ant styles
 .input {
   max-width: 316px;
-  height: 53px;
+  height: 40px;
   font-family: Barlow;
   font-size: 18px;
   font-weight: 400;
@@ -39,13 +39,14 @@
 }
 .button {
   width: 175px;
-  height: 53px;
+  height: 40px;
   color: #ffffff;
   font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
   border: none;
-  background-color: $brandColor;
+  border-radius: 7px;
+  // background-color: $brandColor;
 }
 .inputWripper {
   display: flex;
