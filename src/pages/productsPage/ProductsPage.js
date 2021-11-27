@@ -1,9 +1,6 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { setLaptops, setPhones } from "../../redux/products/productsActions";
 import { NavLink, Route, Switch, useHistory, useRouteMatch } from "react-router-dom";
 import { productsRoutes } from "../../routes/productsRoutes";
-import { laptopsJSON, phonesJSON } from '../../sourses/data/products.js'
 
 import Header from '../../containers/header/Header'
 import Filter from "../../Components/filter/Filter";
@@ -12,14 +9,7 @@ import styles from "./styles.module.scss";
 const ProductsPage = () => {
   const history = useHistory();
   const match = useRouteMatch();
-  const dispatch = useDispatch()
-
-  useEffect(() => {
-    dispatch(setLaptops(laptopsJSON))
-    dispatch(setPhones(phonesJSON))
-  }, [])
-
-
+  
   useEffect(() => {
     history.push(match.path + "/phones");
   }, [history, match.path]);
@@ -49,13 +39,13 @@ const ProductsPage = () => {
         </ul>
         <Filter />
         <Switch>
-          {productsRoutes.map(({ name, path, exact, component }) => (
+          {productsRoutes.map(({ name, category, path, exact, component: MyComponent }) => (
             <Route
               name={name}
               key={path}
               path={match.path + path}
               exact={exact}
-              component={component}
+              render={() => <MyComponent category={category} />}
             />
           ))}
         </Switch>

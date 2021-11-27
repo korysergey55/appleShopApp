@@ -1,6 +1,6 @@
 import React from "react";
-import { useDispatch } from "react-redux";
 import { useHistory, useLocation, useRouteMatch } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import { addToCartOperation } from "../../../../redux/cart/cartOperations";
 
 import { ProductLi } from "./Styled";

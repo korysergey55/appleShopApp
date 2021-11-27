@@ -11,8 +11,15 @@ import {
   setLoader,
 } from "./productsActions";
 
+import { cloneDeep } from "lodash";
+import { laptopsJSON, phonesJSON, ipadsJSON } from '../../sourses/data/products.js'
+const laptops = cloneDeep(laptopsJSON)
+const phones = cloneDeep(phonesJSON)
+const ipads = cloneDeep(ipadsJSON)
+
+
 const productItemsReducer = createReducer(
-  { phones: [], laptops: [], ipads: [], appleWatches: [], airPods: [] },
+  { phones: [...phones], laptops: [...laptops], ipads: [...ipads], appleWatches: [], airPods: [] },
   {
     [setPhones]: (state, action) => ({ ...state, phones: [...action.payload] }),
     [setLaptops]: (state, action) => ({ ...state, laptops: [...action.payload] }),
