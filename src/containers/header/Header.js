@@ -11,7 +11,6 @@ import styles from './styles.module.scss'
 import Logo from '../Logo/Logo'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
-import { faGoogle } from '@fortawesome/free-brands-svg-icons'
 
 const Header = () => {
   const history = useHistory();
@@ -26,8 +25,8 @@ const Header = () => {
           <h2 className={styles.title} > Apple-Shop</h2>
         </div>
         <ul className={styles.navigationList}>
-          {mainRoutes.map((route) => (
-            <HeaderList route={route} token={token} key={route.name} />
+          {mainRoutes.map((route, index) => (
+            <HeaderList route={route} token={token} key={index} />
           ))}
 
           {token && (
@@ -38,7 +37,8 @@ const Header = () => {
                 className={styles.link}
                 activeClassName={styles.linkActive}
               >
-                <FontAwesomeIcon className={styles.icon} icon={faSignOutAlt} color="white" size="2x" />
+                <FontAwesomeIcon className={styles.icon}
+                  icon={faSignOutAlt} color="white" size="2x"/>
               </NavLink>
             </li>
           )}

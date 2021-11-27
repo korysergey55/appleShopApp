@@ -1,27 +1,39 @@
 @import '../../sourses/styles/variables.scss';
 
-.container {
-  margin: 0 auto;
+.filter {
   padding: 10px;
-  .label {
-    margin-left: 20px;
-    font-size: 25px;
-    font-weight: 700;
-    text-align: center;
-    color: $brandColor;
-  }
-  .input {
-    padding: 5px;
-    margin-left: 20px;
-    font-size: 20px;
-    border-radius: 10px;
-    border: 2px solid $brandColor;
-    outline: none;
 
-    &:focus {
-      border: none;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    width: 100%;
+    max-width: 1112px;
+    margin: 0 auto;
+
+    .label {
+      font-size: 22px;
+      font-weight: 700;
+      text-align: center;
+      color: $brandColor;
+    }
+    .input {
+      max-width: 220px;
+      margin-top: 10px;
+      margin-left: 10px;
+      padding: 5px;
+      font-size: 20px;
+      border-radius: 10px;
+      border: 2px solid $brandColor;
       outline: none;
-      outline: 2px solid rgb(0, 190, 0);
+
+      &:focus {
+        border: none;
+        outline: none;
+        outline: 2px solid rgb(0, 190, 0);
+      }
     }
   }
 }

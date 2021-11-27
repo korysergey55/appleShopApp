@@ -5,14 +5,14 @@ export const LaptopLi = styled.li`
  padding: 20px;
 
  .content {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   
   border-radius: 14px;
   border: 1px solid #a8a8a8;
   padding: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 330px;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
    1px 4px 6px rgba(0, 0, 0, 0.16);
  }
  .listItemTitle {
