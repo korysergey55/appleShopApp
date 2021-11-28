@@ -7,7 +7,7 @@ const StarList = () => {
   return (
     <ul className={styles.starList}>
       <li className={styles.item}>
-        <a className={styles.link} href="/">
+        <a className={styles.link}>
           <FontAwesomeIcon
             icon={faStar}
             className={styles.icon}
@@ -15,7 +15,7 @@ const StarList = () => {
         </a>
       </li>
       <li className={styles.item}>
-        <a className={styles.link} href="/" >
+        <a className={styles.link} >
           <FontAwesomeIcon
             icon={faStar}
             className={styles.icon}
@@ -23,7 +23,7 @@ const StarList = () => {
         </a>
       </li>
       <li className={styles.item}>
-        <a className={styles.link} href="/" >
+        <a className={styles.link} >
           <FontAwesomeIcon
             icon={faStar}
             className={styles.icon}
@@ -31,7 +31,7 @@ const StarList = () => {
         </a>
       </li>
       <li className={styles.item}>
-        <a className={styles.link} href="/" >
+        <a className={styles.link} >
           <FontAwesomeIcon
             icon={faStar}
             className={styles.icon}
@@ -39,7 +39,7 @@ const StarList = () => {
         </a>
       </li>
       <li className={styles.item}>
-        <a className={styles.link} href="/">
+        <a className={styles.link}>
           <FontAwesomeIcon
             icon={faStar}
             className={styles.icon}

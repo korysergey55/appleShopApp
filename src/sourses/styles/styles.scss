@@ -14,7 +14,6 @@ body,
   font-family: $defaultFont;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: $textColor;
 }
 
 li,
@@ -48,4 +47,25 @@ img {
   margin: 0 auto;
   text-align: center;
   color: $brandColor;
+}
+button {
+  height: 40px;
+  padding: 0 10px;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 7px;
+  color: aliceblue;
+  border: none;
+  background-color: $brandBgColor;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    cursor: pointer;
+    background-color: #32c220;
+  }
+}
+.ant-modal-close:hover {
+  background-color: transparent;
+  border: none;
 }

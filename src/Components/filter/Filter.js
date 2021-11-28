@@ -16,20 +16,17 @@ const Filter = () => {
   };
 
   return (
-    <section className={styles.filter}>
-      <div className={styles.container}>
-        <label className={styles.label}>
-          Find Goods
-          <input
-            className={styles.input}
-            type="text"
-            value={filter}
-            onChange={onHandleChange}
-            placeholder="Enter product..."
-          />
-        </label>
-      </div>
-    </section>
+    <div className={styles.filter}>
+      <label className={styles.label}>
+        <input
+          className={styles.input}
+          type="text"
+          value={filter}
+          onChange={onHandleChange}
+          placeholder="Search..."
+        />
+      </label>
+    </div>
   );
 };
 

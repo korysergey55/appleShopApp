@@ -24,7 +24,7 @@ export const mainRoutes = [
     component: lazy(() => import("../pages/servisePage/ServicePage.js")),
     exact: false,
     isRestricted: false,
-    isPrivate: true,
+    isPrivate: false,
   },
   {
     name: "Contacts",

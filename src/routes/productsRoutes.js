@@ -5,8 +5,7 @@ export const productsRoutes = [
   {
     name: "ProductDetails",
     path: "/:category/:productID",
-    category: '',
-    component: lazy(() => import("../Components/productDeteils/ProductItemDetails")),
+    component: lazy(() => import("../Components/productDeteils/ProductDetails")),
     exact: false,
     isLink: false,
   },
@@ -30,8 +29,8 @@ export const productsRoutes = [
   },
   {
     name: "iPad",
-    path: "/ipad",
-    category: 'ipad',
+    path: "/ipads",
+    category: 'ipads',
     component: lazy(() => import("../Components/products/newProduct/newProduct")),
     exact: true,
     isLink: true,
@@ -39,8 +38,8 @@ export const productsRoutes = [
   },
   {
     name: "AppleWatch",
-    path: "/watch",
-    category: 'watch',
+    path: "/watches",
+    category: 'watches',
     component: lazy(() => import("../Components/products/newProduct/newProduct")),
     exact: true,
     isLink: true,

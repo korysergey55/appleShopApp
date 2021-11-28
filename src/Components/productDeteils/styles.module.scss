@@ -1,59 +1,93 @@
-.page {
+@import '../../sourses/styles/variables.scss';
+
+.container {
   width: 100%;
-  max-width: 500px;
   padding: 20px;
 
-  .itemContainer {
-    border-radius: 14px;
-    border: 1px solid #a8a8a8;
-    padding: 15px;
+  .goBack {
+    height: 30px;
+    color: white;
+  }
+
+  .content {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 15px;
 
-    .title {
-      font-size: 16px;
-      text-align: center;
-    }
     .imageWrapper {
-      height: 130px;
-      display: flex;
-      justify-content: center;
+      max-width: 500px;
       padding: 10px 0;
-
       .img {
         height: 100%;
       }
     }
-    .price {
-      text-align: center;
-      font-size: 20px;
+    .wripper {
+      max-width: 500px;
+      height: 100%;
+      margin-top: 20px;
+      padding: 0 20px;
 
-      .sale {
-        text-decoration: line-through;
-        color: #dc143c;
+      .title {
+        font-size: 20px;
       }
-      .withoutSale {
-        font-weight: 600;
-        color: #819ff5;
-        font-size: 30px;
+      .raitWripper {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+
+        .rating {
+          margin-right: 10px;
+        }
+      }
+      .colorsWripper {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+
+        .colors {
+          margin-right: 10px;
+        }
+
+        .colorList {
+          display: flex;
+          align-items: center;
+          justify-content: left;
+          margin-bottom: 10px;
+
+          .colorItem {
+            display: block;
+            min-width: 15px;
+            min-height: 15px;
+            margin-right: 10px;
+            background-color: $brandColor;
+          }
+        }
+      }
+      .description {
+        margin-bottom: 40px;
+        font-size: 16px;
+      }
+      .price {
+        margin-bottom: 40px;
+        font-size: 20px;
+        font-weight: 500;
+        color: $brandBgColor;
+
+        .sale {
+          margin-left: 10px;
+          text-decoration: line-through;
+          color: #dc143c;
+        }
       }
     }
-    .options {
-      display: flex;
-      align-items: center;
-
-      .addToCart {
-        width: 50%;
-        border-radius: 7px;
-        margin-right: 10px;
-      }
-      .bayNow {
-        width: 50%;
-        border-radius: 7px;
-        margin-right: 10px;
-      }
+    .addToCart {
+      width: 150px;
+      margin-right: 10px;
+      border-radius: 7px;
+      color: white;
+      background-color: #32c220;
+      border: none;
     }
   }
 }

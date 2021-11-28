@@ -14,19 +14,19 @@ const newProduct = ({ category = "phones"}) => {
     getProductsFilterSelector(state, category)
   );
 
-  useEffect(() => {
-    const getProducts = async () => {
-      const response = await getAllAdvByCategoryApi(category);
-      if (response) {
-        const productsList = Object.keys(response).map((key) => ({
-          id: key,
-          ...response[key],
-        }));
-        dispatch(setPhones(productsList));
-      }
-    };
-    getProducts();
-  }, [dispatch]);
+  // useEffect(() => {
+  //   const getProducts = async () => {
+  //     const response = await getAllAdvByCategoryApi(category);
+  //     if (response) {
+  //       const productsList = Object.keys(response).map((key) => ({
+  //         id: key,
+  //         ...response[key],
+  //       }));
+  //       dispatch(setPhones(productsList));
+  //     }
+  //   };
+  //   getProducts();
+  // }, [dispatch]);
 
   return (
     <ProductUl>

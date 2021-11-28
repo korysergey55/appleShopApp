@@ -15,7 +15,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
  }
  &:hover{
    cursor: pointer;
-   border: 1px solid #819ff5;
+   border: 1px solid #1890ff;
    transform: scale(1);
  }
 
@@ -50,7 +50,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
   }
   .withoutSalePrice {
     font-weight: 600;
-    color: #819ff5;
+    color:#1890ff;
     font-size: 20px;
   }
 }
@@ -61,13 +61,15 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
 
     .btnDetails {
       width: 50%;
-      border-radius: 14px 0 0 14px;
       margin-right: 1px;
+      border-radius: 14px 0 0 14px;
+      color: white;
     }
     .BtnAddToCart {
       width: 50%;
-      border-radius: 0 14px 14px 0;
       margin-right: 1px;
+      border-radius: 0 14px 14px 0;
+      color: white;
     }
   }
 }
