@@ -1,25 +1,35 @@
-import React from "react";
-import { pathes } from '../../../utils/pathes'
-import LoginForm from "../../../Components/auth/loginForm/LoginForm";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from 'react-redux'
+import { setModalAntAction } from '../../../redux/antModal/antModalActions'
+import { modalAntSelector } from "../../../redux/antModal/antModalSelectors";
+
+import ModalAnt from '../../../Components/modalAnt/ModalAnt'
 import Header from '../../../containers/header/Header'
+import LoginForm from "../../../Components/auth/loginForm/LoginForm";
+import AuthForm from "../../../Components/auth/authForm/AuthForm";
 import styles from './styles.module.scss'
-import { useHistory } from "react-router";
 
 const LoginPage = () => {
-  const history = useHistory()
+  const modal = useSelector(modalAntSelector)
+    const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(setModalAntAction())
+  }, [])
+
   return (
-    <section className={styles.LoginPage}>
+    <div className={styles.LoginPage}>
       <Header />
       <div className={styles.container}>
-        <LoginForm />
-        <div className={styles.registWripper}>
-          <h2 className={styles.subtitle}>Registration new user</h2>
-          <button className={styles.btn} type='button' onClick={() => {
-            history.push(pathes.registration)
-          }}>Registration</button>
-        </div>
+        {modal &&
+          <ModalAnt visible={true} width='700px'>
+            <div className={styles.wripper}>
+              <AuthForm />
+              <LoginForm />
+            </div>
+          </ModalAnt>}
       </div>
-    </section>
+    </div>
   );
 };
 

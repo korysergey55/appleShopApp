@@ -5,12 +5,14 @@ import { setModalAntAction } from '../../../redux/antModal/antModalActions'
 import { pathes } from "../../../utils/pathes";
 import { signInWithEmailAndPassword, registerWithEmailAndPassword } from '../../../utils/Firebase/firebase'
 import { Form, Input, Button, Checkbox } from 'antd'
+
 import styles from './styles.module.scss'
+import classNames from 'classnames';
 
-
-const AuthForm = ({ title, titleSubmit, login = true }) => {
+const AuthForm = () => {
   const history = useHistory()
   const dispath = useDispatch()
+  const [login, setLogin] = useState(true)
   const [form] = Form.useForm()
   const [formData, setFormData] = useState({
     name: '',
@@ -46,6 +48,7 @@ const AuthForm = ({ title, titleSubmit, login = true }) => {
 
   const onFinish = () => {
     setUser()
+    setLogin(true)
     form.setFieldsValue({
       name: '',
       email: '',
@@ -57,8 +60,7 @@ const AuthForm = ({ title, titleSubmit, login = true }) => {
   }
 
   return (
-    <div className={styles.formContainer}>
-      <h2 className={styles.title}>{title}</h2>
+    <div className={styles.authForm}>
       <Form
         form={form}
         name="AuthForm"
@@ -70,6 +72,23 @@ const AuthForm = ({ title, titleSubmit, login = true }) => {
         onFinishFailed={onFinishFailed}
         autoComplete="off"
       >
+        <div className={styles.btnContainer}>
+          <button
+            className={classNames(styles.btnChange, { [styles.activ]: login })}
+            type="button"
+            onClick={() => setLogin(true)}
+          >
+            Login
+          </button>
+          <button
+            className={classNames(styles.btnChange, { [styles.activ]: !login })}
+            type="button"
+            onClick={() => setLogin(false)}
+          >
+            Registration
+          </button>
+        </div>
+
         {!login && (
           <Form.Item
             label="Name"
@@ -122,7 +141,7 @@ const AuthForm = ({ title, titleSubmit, login = true }) => {
         </Form.Item>
         <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
           <Button type="primary" htmlType="submit">
-            {titleSubmit}
+            Submit
           </Button>
         </Form.Item>
       </Form>

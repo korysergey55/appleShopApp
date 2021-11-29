@@ -38,7 +38,7 @@ const ProductItem = ({ product }) => {
 
         <p className="price">
           <span className="withoutSalePrice"> {product.price} грн</span>{" "}
-          <span className="salePrice" >SalePrise</span>
+          <span className="salePrice" >Old-price</span>
         </p>
         <div className="options">
           <button className="btnDetails" onClick={openDetails}>

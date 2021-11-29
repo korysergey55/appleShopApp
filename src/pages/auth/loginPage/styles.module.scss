@@ -1,37 +1,16 @@
 @import '../../../sourses/styles/variables.scss';
 
 .container {
+  width: 100%;
+  min-height: 800px;
+  height: 100%;
+  background-image: url('https://www.apple.com/ua/iphone/home/images/overview/hero/iphone_12__d51ddqcc7oqe_large.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+ }
+.wripper {
   display: flex;
   justify-content: space-evenly;
-  align-items: flex-start;
   flex-wrap: wrap;
-  width: 100%;
-  max-width: 1112px;
-  margin: 0 auto;
-  padding-top: 30px;
-
-  .registWripper {
-    .subtitle {
-      display: block;
-      margin: 0 auto;
-      margin-bottom: 20px;
-      text-align: center;
-      color: $brandColor;
-    }
-
-    .btn {
-      display: block;
-      margin: 0 auto;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      border: 1px solid transparent;
-      transition: border 350ms cubic-bezier(0.4, 0, 0.2, 1);
-      transition: background-color 350ms cubic-bezier(0.4, 0, 0.2, 1);
-
-      &:hover {
-        background-color: $activeColor2;
-        border: 1px solid $activeColor2;
-      }
-    }
-  }
 }

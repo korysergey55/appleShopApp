@@ -7,13 +7,12 @@ import { setModalAntAction } from '../../../redux/antModal/antModalActions'
 import { modalAntSelector } from '../../../redux/antModal/antModalSelectors';
 import { pathes } from '../../../utils/pathes'
 import { signInWithGoogle, signInWithFacebook } from '../../../utils/Firebase/firebase'
-import AuthForm from '../authForm/AuthForm';
 
 import styles from './styles.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faGoogle, faFacebookF } from '@fortawesome/free-brands-svg-icons'
-import ModalAnt from '../../modalAnt/ModalAnt'
+
 
 const LoginForm = () => {
   const history = useHistory()
@@ -36,12 +35,8 @@ const LoginForm = () => {
     }
   }
 
-  const loginWithEmail = () => {
-    dispath(setModalAntAction())
-  }
-
   return (
-    <div >
+    <div className={styles.loginForm}>
       <h2 className={styles.subtitle}>Login with</h2>
       <ul className={styles.list}>
         <li className={styles.item} name="google"
@@ -64,8 +59,8 @@ const LoginForm = () => {
             <FontAwesomeIcon icon={faFacebookF} color="white" size="2x" />
           </button>
         </li>
-        <li className={styles.item} name="email"
-          onClick={() => loginWithEmail()}>
+        {/* <li className={styles.item} name="email"
+          onClick={() => {}}>
           <p className={styles.text}>Email:</p>
           <button
             className={styles.loginBtn}
@@ -73,12 +68,8 @@ const LoginForm = () => {
           >
             <FontAwesomeIcon icon={faEnvelope} color="white" size="2x" />
           </button>
-        </li>
+        </li> */}
       </ul>
-      {modal &&
-        <ModalAnt visible={true}>
-          <AuthForm title='Login with email' titleSubmit='Login' />
-        </ModalAnt>}
     </div>
   );
 }
