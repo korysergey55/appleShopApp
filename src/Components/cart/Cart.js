@@ -19,39 +19,34 @@ const Cart = () => {
   return (
     <div className={styles.container}>
       {cartItems.length ? (
-        <>
+        <div className={styles.cart}>
           <h2 className={styles.title}>Cart</h2>
           <ul className={styles.list}>
             {cartItems.map((product) => (
               <CartItem key={product.id} product={product} />
             ))}
           </ul>
-
           <div className={styles.totalContainer}>
-            <div className={styles.wripperTitle} >
-              <h3 className={styles.title}>Total price:</h3>
-              <p className={styles.price}>
-                {totalPriceInOrder} <span className={styles.priceSpan}>грн</span>
-              </p>
-            </div>
-            <div className={styles.btnWripper}>
-              <button
-                type="button"
-                onClick={() => history.push(pathes.order)}
-                className={styles.orderButton}
-              >
-                Create Order
-              </button>
-              <button
+            {/* <h3 className={styles.title}>Total price:</h3> */}
+            <h2 className={styles.totalPrise}>
+              {totalPriceInOrder} грн
+            </h2>
+            <button
+              type="button"
+              onClick={() => history.push(pathes.order)}
+              className={styles.orderButton}
+            >
+              Create Order
+            </button>
+            {/* <button
                 type="button"
                 onClick={() => dispatch(remuveAllFromCartOperation())}
                 className={styles.remuveButton}
               >
                 Remuve all
-              </button>
-            </div>
+              </button> */}
           </div>
-        </>
+        </div>
       ) : (
         <h2 className={styles.titleEmpty}>Cart is empty!</h2>
       )

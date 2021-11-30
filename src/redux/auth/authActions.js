@@ -9,5 +9,8 @@ export const loginUserActionError = createAction("auth/loginUserActionError");
 export const logoutUserAction = createAction("auth/logoutUserAction");
 export const logoutUserActionError = createAction("auth/logoutUserActionError");
 
-export const subscribeAction = createAction("auth/subscribeAction");
-export const subscribeActionError = createAction("auth/subscribeActionError");
+export const subscribeFormAction = createAction("auth/subscribeFormAction");
+export const subscribeFormActionError = createAction("auth/subscribeFormActionError");
+
+export const contactFormAction = createAction("auth/contactFormAction");
+export const contactFormActionError = createAction("auth/contactFormActionError");

@@ -7,25 +7,16 @@ const SotialList = () => {
   return (
     <ul className={styles.list}>
       <li className={styles.item}>
-        <a className={styles.link} href="/">
-          <FontAwesomeIcon icon={faInstagram} className={styles.icon} />
-        </a>
+        <FontAwesomeIcon icon={faInstagram} className={styles.icon} />
       </li>
       <li className={styles.item}>
-        <a className={styles.link} href="/">
-          <FontAwesomeIcon icon={faFacebookF} className={styles.icon} />
-        </a>
+        <FontAwesomeIcon icon={faFacebookF} className={styles.icon} />
       </li>
       <li className={styles.item}>
-        <a className={styles.link} href="/">
-          <FontAwesomeIcon icon={faTelegram} className={styles.icon} />
-        </a>
+        <FontAwesomeIcon icon={faTelegram} className={styles.icon} />
       </li>
-
       <li className={styles.item}>
-        <a className={styles.link} href="/">
-          <FontAwesomeIcon icon={faLinkedin} className={styles.icon} />
-        </a>
+        <FontAwesomeIcon icon={faLinkedin} className={styles.icon} />
       </li>
     </ul>
   );

@@ -2,23 +2,15 @@
 
 .footer {
   position: relative;
-  padding-top: 10px;
+  padding: 10px 0;
   background-color: $brandColor;
-  // &::after {
-  //   position: absolute;
-  //   top: 83%;
-  //   content: '';
-  //   background-color: #ffffff;
-  //   width: 100%;
-  //   height: 1px;
-  //   opacity: 0.15;
-  // }
+
   .container {
     display: block;
     width: 100%;
     max-width: 1300px;
     margin: 0 auto;
-    
+
     .list {
       display: flex;
       justify-content: space-evenly;
@@ -29,7 +21,7 @@
         max-width: 300px;
         margin: 10px 10px;
         .title {
-          margin-bottom: 20px;
+          margin-bottom: 10px;
           font-size: 23px;
           font-weight: 700;
           text-align: center;

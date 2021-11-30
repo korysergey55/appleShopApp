@@ -6,9 +6,7 @@ import styles from "./styles.module.scss";
 import sprite from '../../../sourses/icons/productsSprite.svg'
 
 const CartListItem = ({ product }) => {
-  const { name, price, id, image,
-    code = '60785', description,
-    rait } = product;
+  const { name, price, id, image, description } = product;
 
   const dispatch = useDispatch();
   const removeFromCart = () => {
@@ -17,7 +15,7 @@ const CartListItem = ({ product }) => {
 
   return (
     <li className={styles.item}>
-      <img src={image} alt='productImg' className={styles.img} />
+      <img className={styles.img} src={image} alt='productImg' onClick={() => { }} />
       <div className={styles.wripper}>
         <h2 className={styles.title}>{name}</h2>
         <p className={styles.description}>{description}</p>

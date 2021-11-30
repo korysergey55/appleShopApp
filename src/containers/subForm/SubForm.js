@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from "react-redux";
-import { subscribeAction } from "../../redux/auth/authActions";
+import { subscribeFormAction } from "../../redux/auth/authActions";
 import styles from './styles.module.scss'
 
 const SubForm = () => {
@@ -13,7 +13,7 @@ const SubForm = () => {
 
   const onFinish = (evt) => {
     evt.preventDefault()
-    dispatch(subscribeAction(state))
+    dispatch(subscribeFormAction(state))
     setState('')
   }
 

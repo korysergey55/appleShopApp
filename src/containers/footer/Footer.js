@@ -52,6 +52,7 @@ const Footer = () => {
                 {shopEmail}
               </a>
             </div>
+            <SotialList />
           </li>
           <li className={styles.item}>
             <h4 className={styles.title}>Opening Hours</h4>
@@ -64,15 +65,10 @@ const Footer = () => {
             <h4 className={styles.title}>Useful Links</h4>
             <p className={styles.text}>About us</p>
             <p className={styles.text}>Contact</p>
+            <p className={styles.text}>Subscribe</p>
             <p className={styles.text}>Shop</p>
-            <SotialList />
           </li>
         </ul>
-      </div>
-      <div className={styles.copyright}>
-        <p className={styles.text}>
-          Copyright 2020, Groxi Store. All Rights Reserved.
-        </p>
       </div>
     </footer>
   )

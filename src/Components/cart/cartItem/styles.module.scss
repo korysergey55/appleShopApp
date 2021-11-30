@@ -19,6 +19,12 @@
     max-width: 280px;
     max-height: 200px;
     margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
   .title {
     max-width: 500px;
@@ -31,6 +37,7 @@
   }
   .price {
     margin-right: 10px;
+    margin-left: 20px;
     font-size: 20px;
     font-weight: 700;
     color: $brandColor;

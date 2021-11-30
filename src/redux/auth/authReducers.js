@@ -6,8 +6,10 @@ import {
   loginUserAction,
   loginUserActionError,
   logoutUserAction,
-  subscribeAction,
-  subscribeActionError
+  subscribeFormAction,
+  subscribeFormActionError,
+  contactFormAction,
+  contactFormActionError
 } from "./authActions";
 
 const registerReducer = createReducer(null, {
@@ -25,22 +27,28 @@ const userReducer = createReducer(null, {
 });
 
 const subscribeReducer = createReducer(null, {
-  [subscribeAction]: (state, action) => action.payload,
+  [subscribeFormAction]: (state, action) => action.payload,
+});
+
+const contactFormReducer = createReducer(null, {
+  [contactFormAction]: (state, action) => action.payload,
 });
 
 const errorReducer = createReducer(null, {
   [registerUserActionError]: (state, action) => action.payload,
   [loginUserActionError]: (state, action) => action.payload,
   [logoutUserAction]: (state, action) => action.payload,
-  [subscribeActionError]: (state, action) => action.payload,
+  [subscribeFormActionError]: (state, action) => action.payload,
+  [contactFormActionError]: (state, action) => action.payload,
 });
 
 const authReducer = combineReducers({
   token: tokenReducer,
   user: userReducer,
   registration: registerReducer,
+  subscribeForm: subscribeReducer,
+  contactForm: contactFormReducer,
   error: errorReducer,
-  subscribe: subscribeReducer,
 });
 
 export default authReducer;

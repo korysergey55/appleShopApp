@@ -5,7 +5,7 @@ import { cartItemSelector } from "../../redux/cart/cartSelectors";
 
 import Header from '../../containers/header/Header'
 import Cart from "../../Components/cart/Cart";
-
+import Footer from '../../containers/footer/Footer'
 import styles from './styles.module.scss'
 
 const CartPage = () => {
@@ -19,12 +19,11 @@ const CartPage = () => {
 
   return (
     <div className={styles.cartPage}>
-      <section className={styles.cartPage}>
-        <Header />
-        <div className={styles.container}>
-          <Cart />
-        </div>
-      </section >
+      <Header />
+      <div className={styles.container}>
+        <Cart />
+      </div>
+      <Footer/>
     </div >
   );
 };

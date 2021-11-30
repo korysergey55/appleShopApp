@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
-import styles from './styles.module.scss'
+import { useDispatch } from 'react-redux'
+import { contactFormAction } from '../../../redux/auth/authActions'
 import { Form, Input, Button, Row, Col } from 'antd'
+import styles from './styles.module.scss'
 
 const validateMessages = {
   required: '${label} is required!',
@@ -9,25 +11,27 @@ const validateMessages = {
     number: '${label} is not a valid number!',
   },
 }
-const initialState = { name: '', email: '', tel: '', address: '', message: '' }
-
 const ContactForm = () => {
-  // const { productStore } = useStore()
-  const [formData, setFormData] = useState({ ...initialState })
+  const dispatch = useDispatch()
+  const [form] = Form.useForm()
+  const [formData, setFormData] = useState({ name: '', email: '', tel: '', address: '', message: '' })
 
-  const inputChange = (e) => {
-    const value = e.target.value
-    const name = e.target.name
+  const inputChange = (evt) => {
+    const { value, name } = evt.target.value
     setFormData(prev => ({ ...prev, [name]: value }))
   }
-  const submitForm = () => {
-    // productStore.setFormData(formData)
 
+  const submitForm = () => {
+    dispatch(contactFormAction(formData))
+    form.setFieldsValue({ name: '', email: '', tel: '', address: '', message: '' })
   }
+
+  console.log(formData)
   return (
     <div className={styles.contactForm}>
       <h2 className={styles.formTitle}>Get In Touch</h2>
       <Form
+        form={form}
         name="contactForm"
         validateMessages={validateMessages}
         onFinish={submitForm}
@@ -36,9 +40,10 @@ const ContactForm = () => {
           <Col span={12}>
             <Form.Item name={['Name']} rules={[{ required: true }]}>
               <Input
-                name="name"
-                placeholder="Name"
                 className={styles.input}
+                placeholder="Name"
+                name="name"
+                value={formData.name}
                 onChange={inputChange}
               />
             </Form.Item>
@@ -49,9 +54,10 @@ const ContactForm = () => {
               rules={[{ type: 'email', required: true }]}
             >
               <Input
-                name="email"
-                placeholder="Email"
                 className={styles.input}
+                placeholder="Email"
+                name="email"
+                value={formData.email}
                 onChange={inputChange}
               />
             </Form.Item>
@@ -64,9 +70,10 @@ const ContactForm = () => {
               rules={[{ message: 'Please input your phone number!' }]}
             >
               <Input
-                name="tel"
-                placeholder="Phone"
                 className={styles.input}
+                placeholder="Phone"
+                name="tel"
+                value={formData.tel}
                 onChange={inputChange}
               />
             </Form.Item>
@@ -74,9 +81,10 @@ const ContactForm = () => {
           <Col span={12}>
             <Form.Item name={['address']}>
               <Input
-                name="address"
-                placeholder="Address"
                 className={styles.input}
+                placeholder="Address"
+                name="address"
+                value={formData.address}
                 onChange={inputChange}
               />
             </Form.Item>
@@ -84,10 +92,11 @@ const ContactForm = () => {
         </Row>
 
         <Input.TextArea
-          name="message"
-          placeholder="message"
           className={styles.textarea}
           style={{ height: 181 }}
+          placeholder="message"
+          name="message"
+          value={formData.message}
           onChange={inputChange}
         />
         <Form.Item>

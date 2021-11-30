@@ -4,6 +4,7 @@ import { mainRoutes } from "../../routes/mainRoutes";
 import { useSelector } from "react-redux";
 import { authTokenSelector } from "../../redux/auth/authSelectors";
 import { ToastContainer } from 'react-toastify'
+
 import PrivateRoute from "../../routes/PrivateRoute";
 import PublicRoute from "../../routes/PublicRoute";
 import Loader from "../../containers/Loader/Loader";
