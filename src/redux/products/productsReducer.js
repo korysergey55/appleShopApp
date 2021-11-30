@@ -1,5 +1,6 @@
 import { createReducer, combineReducers } from "@reduxjs/toolkit";
 import {
+  allProductsAction,
   setPhones,
   setLaptops,
   setIpads,
@@ -16,6 +17,7 @@ import { laptopsJSON, phonesJSON, ipadsJSON } from '../../sourses/data/products.
 const laptops = cloneDeep(laptopsJSON)
 const phones = cloneDeep(phonesJSON)
 const ipads = cloneDeep(ipadsJSON)
+const allProducts = [...laptops, ...phones, ...ipads,]
 
 const productItemsReducer = createReducer(
   { phones: [...phones], laptops: [...laptops], ipads: [...ipads], appleWatches: [], airPods: [] },
@@ -30,6 +32,9 @@ const productItemsReducer = createReducer(
 const productWithIdReducer = createReducer([],
   { [setProductWithId]: (state, action) => ({ ...action.payload }) }
 );
+const allProductsReducer = createReducer([...allProducts],
+  { [allProductsAction]: (state, action) => (state) }
+);
 
 const productsErrorReducer = createReducer("", {
   [setError]: (_, action) => action.payload,
@@ -41,6 +46,7 @@ const productsLoaderReducer = createReducer(false, {
 });
 
 const productsReducer = combineReducers({
+  allItems: allProductsReducer,
   items: productItemsReducer,
   productWithId: productWithIdReducer,
   error: productsErrorReducer,

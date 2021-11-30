@@ -1,18 +1,32 @@
 @import '../../sourses/styles/variables.scss';
 
+.title {
+  margin-bottom: 20px;
+  font-size: 35px;
+  color: $brandColor;
+  text-align: center;
+  text-shadow: $textShadow;
+}
 .container {
   width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
   height: 100vw;
   background-image: url('');
   background-repeat: no-repeat;
   background-position: left;
   background-size: contain;
 
-  .title {
+  .titlePage {
     margin-bottom: 20px;
-    font-size: 35px;
+    font-size: 25px;
     color: $brandColor;
     text-align: center;
     text-shadow: $textShadow;
+  }
+
+  .img {
+    width: 100%;
+    border-radius: 10px;
   }
 }

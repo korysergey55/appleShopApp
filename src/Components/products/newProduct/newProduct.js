@@ -8,7 +8,7 @@ import ProductItem from "./productItem/productItem";
 
 import { ProductUl } from "./Styled";
 
-const newProduct = ({ category = "phones"}) => {
+const NewProduct = ({ category = "phones"}) => {
   const dispatch = useDispatch();
   const products = useSelector((state) =>
     getProductsFilterSelector(state, category)
@@ -36,4 +36,4 @@ const newProduct = ({ category = "phones"}) => {
     </ProductUl>
   );
 };
-export default newProduct;
+export default NewProduct;

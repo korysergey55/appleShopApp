@@ -1,29 +1,20 @@
 @import '../../sourses/styles/variables.scss';
 
-.container {
-  display: block;
-  width: 100%;
-  max-width: 1112px;
-  margin: 0 auto;
+.homePage {
+  background-image: url('https://www.apple.com/ua/imac-24/images/overview/colors_lifestyle_fallback__fat816a51hua_large.jpg');
 
-  .titlePage {
-    margin-bottom: 20px;
-    font-size: 25px;
-    color: $brandColor;
-    text-align: center;
-    text-shadow: $textShadow;
-  }
-
-  .title {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 25px;
-    text-align: center;
-    text-shadow: $textShadow;
-  }
-
-  .img {
+  .container {
+    display: block;
     width: 100%;
-    border-radius: 10px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .title {
+    display: block;
+    margin: 0;
+    font-size: 35px;
+    text-align: center;
+    text-shadow: $textShadow;
+    color: white;
   }
 }

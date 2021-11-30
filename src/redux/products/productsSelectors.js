@@ -1,3 +1,5 @@
+
+export const getAllItemsSelector = (state) => state.products.allItems;
 export const getPhonesSelector = (state) => state.products.items.phones;
 export const getLaptopsSelector = (state) => state.products.items.laptops;
 export const getIpadsSelector = (state) => state.products.items.ipads;

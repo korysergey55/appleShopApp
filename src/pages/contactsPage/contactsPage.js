@@ -1,10 +1,10 @@
 import React from 'react';
 import Header from '../../containers/header/Header'
-import Section from '../../containers/section/Section';
-import styles from "./styles.module.scss";
 import ContactForm from '../../Components/contact/contactForm/ContactForm'
 import ReachUs from '../../Components/contact/reachUs/ReachUs';
 import CustomersSaying from '../../Components/customersSay/CustomersSay';
+import styles from "./styles.module.scss";
+import Footer from '../../containers/footer/Footer'
 
 const ContactsPage = () => {
   return (
@@ -19,6 +19,7 @@ const ContactsPage = () => {
         <ContactForm />
         <CustomersSaying />
       </div>
+      <Footer/>
     </section>
   );
 };

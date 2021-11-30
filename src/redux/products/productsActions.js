@@ -1,5 +1,6 @@
 import { createAction } from "@reduxjs/toolkit";
 
+const allProductsAction = createAction("@products/allProductsAction");
 const setPhones = createAction("@products/getPhones");
 const setLaptops = createAction("@products/getLaptops");
 const setIpads = createAction("@products/getIpad");
@@ -13,13 +14,14 @@ const setLoader = createAction("@products/getPhones");
 
 
 export {
- setPhones,
- setLaptops,
- setIpads,
- setAppleWatches,
- setAirPods,
- setProductWithId,
- setError,
- resetError,
- setLoader,
+  allProductsAction,
+  setPhones,
+  setLaptops,
+  setIpads,
+  setAppleWatches,
+  setAirPods,
+  setProductWithId,
+  setError,
+  resetError,
+  setLoader,
 };

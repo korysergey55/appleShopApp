@@ -14,8 +14,9 @@ const SubForm = () => {
   const onFinish = (evt) => {
     evt.preventDefault()
     dispatch(subscribeAction(state))
+    setState('')
   }
-  
+
   return (
     <div className={styles.containerSubForm}>
       <form className={styles.form} onSubmit={(evt) => onFinish(evt)}>
