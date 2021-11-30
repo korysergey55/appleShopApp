@@ -1,9 +1,12 @@
 import React, { useEffect } from "react";
 import { useHistory, useRouteMatch } from "react-router-dom";
+
 import Header from '../../containers/header/Header'
 import Filter from "../../Components/filter/Filter";
-import ProductRout from "../../Components/products/productsRouts/ProductRouts";
 import ProductNavLinks from "../../Components/products/productNavLinks/ProductNavLinks";
+import ProductRout from "../../Components/products/productsRouts/ProductRouts";
+import SubForm from "../../containers/subForm/SubForm";
+import Footer from "../../containers/footer/Footer"
 import styles from "./styles.module.scss";
 
 const ProductsPage = () => {
@@ -19,11 +22,13 @@ const ProductsPage = () => {
       <Header />
       <div className={styles.container}>
         <div className={styles.wripper}>
-          {/* <Filter /> */}
+          <Filter />
           <ProductNavLinks />
         </div>
         <ProductRout />
+        <SubForm/>
       </div>
+      <Footer/>
     </div>
   );
 };

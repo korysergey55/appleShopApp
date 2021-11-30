@@ -9,6 +9,12 @@
   max-width: 1112px;
   margin: 0 auto;
 
+  .title {
+    font-size: 25px;
+    font-weight: 700;
+    color: $brandColor;
+  }
+
   .list {
     display: flex;
     flex-direction: column;

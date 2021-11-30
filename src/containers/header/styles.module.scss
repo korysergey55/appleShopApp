@@ -10,8 +10,9 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+
   width: 100%;
-  max-width: 1112px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 10px 15px;
 
@@ -28,6 +29,26 @@
     }
     &:hover {
       cursor: pointer;
+    }
+  }
+  .wripperTel {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    
+    .link {
+      margin-bottom: 0;
+      font-family: Barlow;
+      font-size: 19px;
+      font-weight: 600;
+      text-align: left;
+      color: white;
+    }
+
+    .icon {
+      width: 30px;
+      height: 30px;
+      margin-right: 20px;
     }
   }
 
@@ -57,7 +78,7 @@
         }
       }
       .linkActive {
-        color:  #1890ff;
+        color: #1890ff;
       }
     }
   }

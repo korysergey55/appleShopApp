@@ -3,11 +3,11 @@
 .item {
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 
   width: 100%;
+  min-height: 250px;
   margin-bottom: 10px;
   padding: 10px;
   border: 1px solid $brandColor;
@@ -16,8 +16,8 @@
     1px 4px 6px rgba(0, 0, 0, 0.16);
 
   .img {
-    // max-width: 300px;
-    max-height: 280px;
+    max-width: 280px;
+    max-height: 200px;
     margin-bottom: 20px;
   }
   .title {
@@ -28,22 +28,6 @@
   }
   .description {
     max-width: 500px;
-  }
-  .code {
-  }
-  .colorList {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    margin-bottom: 10px;
-
-    .colorItem {
-      display: block;
-      min-width: 10px;
-      min-height: 10px;
-      margin-right: 10px;
-      background-color: $brandColor;
-    }
   }
   .price {
     margin-right: 10px;

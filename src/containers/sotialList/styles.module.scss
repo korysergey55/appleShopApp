@@ -1,0 +1,37 @@
+@import '../../sourses/styles/variables.scss';
+
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background-color: white;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      cursor: pointer;
+      border: 1px solid $brandColor;
+    }
+
+    &:hover .icon {
+      cursor: pointer;
+      color: $activeColor;
+    }
+    .icon {
+      width: 20px;
+      height: 20px;
+      color: $brandColor;
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+}

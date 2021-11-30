@@ -20,6 +20,7 @@ const Cart = () => {
     <div className={styles.container}>
       {cartItems.length ? (
         <>
+          <h2 className={styles.title}>Cart</h2>
           <ul className={styles.list}>
             {cartItems.map((product) => (
               <CartItem key={product.id} product={product} />

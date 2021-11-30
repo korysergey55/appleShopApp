@@ -21,14 +21,6 @@ const CartListItem = ({ product }) => {
       <div className={styles.wripper}>
         <h2 className={styles.title}>{name}</h2>
         <p className={styles.description}>{description}</p>
-        <p className={styles.code}>Product code: {code}</p>
-        <p className={styles.rait}>Rating: {rait}</p>
-        <ul className={styles.colorList}>
-          <li className={styles.colorItem}></li>
-          <li className={styles.colorItem}></li>
-          <li className={styles.colorItem}></li>
-          <li className={styles.colorItem}></li>
-        </ul>
         <span className={styles.price}> {price} грн</span>
         <div className={styles.iconContainer} onClick={removeFromCart}>
           <svg className={styles.iconBin}>

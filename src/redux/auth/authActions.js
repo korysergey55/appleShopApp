@@ -8,3 +8,6 @@ export const loginUserActionError = createAction("auth/loginUserActionError");
 
 export const logoutUserAction = createAction("auth/logoutUserAction");
 export const logoutUserActionError = createAction("auth/logoutUserActionError");
+
+export const subscribeAction = createAction("auth/subscribeAction");
+export const subscribeActionError = createAction("auth/subscribeActionError");

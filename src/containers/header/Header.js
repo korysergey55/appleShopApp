@@ -1,16 +1,18 @@
 import React from "react";
 import { withRouter, NavLink, useHistory } from "react-router-dom";
 import { mainRoutes } from "../../routes/mainRoutes";
-import { pathes } from "../../utils/pathes";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUserOperation } from "../../redux/auth/authOperations";
 import { authTokenSelector } from '../../redux/auth/authSelectors';
+import { pathes } from "../../utils/pathes";
+
 import HeaderList from "./headerList/HeaderList";
+import Logo from '../Logo/Logo'
 
 import styles from './styles.module.scss'
-import Logo from '../Logo/Logo'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
+import { faSignOutAlt, faMobileAlt } from '@fortawesome/free-solid-svg-icons'
+import { shopLocation, shopTel, shopEmail, shopAdress } from '../../utils/location'
 
 const Header = () => {
   const history = useHistory();
@@ -28,7 +30,6 @@ const Header = () => {
           {mainRoutes.map((route, index) => (
             <HeaderList route={route} token={token} key={index} />
           ))}
-
           {token && (
             <li className={styles.item}>
               <NavLink
@@ -38,11 +39,22 @@ const Header = () => {
                 activeClassName={styles.linkActive}
               >
                 <FontAwesomeIcon className={styles.icon}
-                  icon={faSignOutAlt} color="white" size="2x"/>
+                  icon={faSignOutAlt} color="white" size="2x" />
               </NavLink>
             </li>
           )}
         </ul>
+        <div className={styles.wripperTel}>
+          <a className={styles.link} href={`tel:${shopTel}`}>
+            <FontAwesomeIcon
+              className={styles.icon}
+              icon={faMobileAlt}
+              color="#ffffff"
+              size="3x"
+            />
+            {shopTel}
+          </a>
+        </div>
       </div>
     </header>
   );
