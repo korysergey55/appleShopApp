@@ -17,7 +17,7 @@ const ContactForm = () => {
   const [formData, setFormData] = useState({ name: '', email: '', tel: '', address: '', message: '' })
 
   const inputChange = (evt) => {
-    const { value, name } = evt.target.value
+    const { value, name } = evt.target
     setFormData(prev => ({ ...prev, [name]: value }))
   }
 
@@ -26,7 +26,6 @@ const ContactForm = () => {
     form.setFieldsValue({ name: '', email: '', tel: '', address: '', message: '' })
   }
 
-  console.log(formData)
   return (
     <div className={styles.contactForm}>
       <h2 className={styles.formTitle}>Get In Touch</h2>
@@ -38,10 +37,11 @@ const ContactForm = () => {
       >
         <Row gutter={18}>
           <Col span={12}>
-            <Form.Item name={['Name']} rules={[{ required: true }]}>
+            <Form.Item name={['name']} rules={[{ required: true }]}>
               <Input
                 className={styles.input}
                 placeholder="Name"
+                minLength={3}
                 name="name"
                 value={formData.name}
                 onChange={inputChange}
@@ -90,15 +90,16 @@ const ContactForm = () => {
             </Form.Item>
           </Col>
         </Row>
-
-        <Input.TextArea
-          className={styles.textarea}
-          style={{ height: 181 }}
-          placeholder="message"
-          name="message"
-          value={formData.message}
-          onChange={inputChange}
-        />
+        <Form.Item name={['message']}>
+          <Input.TextArea
+            className={styles.textarea}
+            style={{ height: 181 }}
+            placeholder="message"
+            name="message"
+            value={formData.message}
+            onChange={inputChange}
+          />
+        </Form.Item>
         <Form.Item>
           <Button
             type="primary"

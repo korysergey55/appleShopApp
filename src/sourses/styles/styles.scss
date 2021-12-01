@@ -65,7 +65,33 @@ button {
     background-color: #32c220;
   }
 }
+// Ant modal
 .ant-modal-close:hover {
   background-color: transparent;
   border: none;
+}
+
+//Slick slider
+.slick-slider {
+  width: 95px;
+
+  .slick-list {
+    overflow: hidden;
+
+    .slick-track {
+      max-height: 400px;
+    }
+  }
+  .slick-arrow {
+    width: 95px;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #32c220;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }

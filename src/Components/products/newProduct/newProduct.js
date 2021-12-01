@@ -1,11 +1,10 @@
 import React, { useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setPhones } from "../../../redux/products/productsActions";
 import { getProductsFilterSelector } from "../../../redux/filter/filterSelectors";
-import { getAllAdvByCategoryApi } from "../../../services/api";
 import { v4 as uuidv4 } from 'uuid';
+import { setPhones } from "../../../redux/products/productsActions";
+import { getAllAdvByCategoryApi } from "../../../services/api";
 import ProductItem from "./productItem/productItem";
-
 import { ProductUl } from "./Styled";
 
 const NewProduct = ({ category = "phones"}) => {

@@ -16,10 +16,33 @@
     padding: 15px;
 
     .imageWrapper {
-      max-width: 500px;
-      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+
+      .sliderContainer {
+        width: 95px;
+               
+        .scrollBtn {
+          width: 95px;
+          height: 30px;
+          margin-bottom: 17px;
+          background-color: #32c220;
+
+          .icon {
+            color: #ffffff;
+          }
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
       .img {
-        height: 100%;
+        max-width: 500px;
+        margin-left: 20px;
+        padding: 10px 0;
+        max-height: 450px;
       }
     }
     .wripper {
