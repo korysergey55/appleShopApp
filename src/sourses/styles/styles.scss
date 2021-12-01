@@ -95,3 +95,10 @@ button {
     }
   }
 }
+
+.linkActive {
+  color: $activeColor;
+  .cart {
+    fill: $activeColor;
+  }
+}

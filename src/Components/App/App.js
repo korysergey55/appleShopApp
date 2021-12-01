@@ -14,7 +14,7 @@ const App = () => {
   const token = useSelector(authTokenSelector);
 
   return (
-    <div>
+    <div className='appContainer'>
       <Suspense fallback={<Loader/>}>
         <Switch>
           {mainRoutes.map((route) =>

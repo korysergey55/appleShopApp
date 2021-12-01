@@ -8,9 +8,9 @@ import Footer from '../../containers/footer/Footer'
 
 const ContactsPage = () => {
   return (
-    <section className={styles.contactPage}>
+    <div className={styles.contactPage}>
       <Header />
-      <h2 className={styles.title}>Contact Us</h2>
+      <h2 className={styles.title}>Contact</h2>
       <div className={styles.container}>
         <div className={styles.wripper}>
           <div className={styles.map}></div>
@@ -20,7 +20,7 @@ const ContactsPage = () => {
         <CustomersSaying />
       </div>
       <Footer/>
-    </section>
+    </div>
   );
 };
 
