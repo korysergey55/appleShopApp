@@ -1,13 +1,13 @@
 import React from 'react';
-import Header from '../../containers/header/Header'
-import styles from "./styles.module.scss";
 import { Player, ControlBar, BigPlayButton, Shortcut } from "video-react";
+import Header from '../../containers/header/Header'
+import Footer from '../../containers/footer/Footer'
+import styles from "./styles.module.scss";
 
 const ServicePage = () => {
   return (
     <div className={styles.servicePage}>
       <Header />
-      <h1 className={styles.title}> Apple Shop Service Page</h1>
       <Player
         autoPlay
         playsInline
@@ -32,13 +32,6 @@ const ServicePage = () => {
           <BigPlayButton position="center" />
           <Shortcut clickable={false} />
         </Player>
-        <h2 className={styles.title}>Грандіозний стрибок уперед.</h2>
-
-        <img
-          className={styles.img}
-          src="https://www.apple.com/ua/iphone/home/images/overview/hero/iphone_12__d51ddqcc7oqe_large.jpg"
-          alt="titlefoto"
-        />
         <h2 className={styles.title}>Рамка менша Экран бiльше!</h2>
         <img
           className={styles.img}
@@ -48,11 +41,6 @@ const ServicePage = () => {
         <h2 className={styles.title}>
           A14 Bionic — перший процесор у галузі, який було створено з використанням
           5-﻿нано­метрової технології. Його передові компоненти завбільшки з атоми.
-          Він має на 40% більше транзисторів, тому процесор працює швидше й водночас
-          із вищою енергоефективністю, забезпечуючи тривалу роботу від акумулятора. А
-          новий процесор обробки сигналу дає змогу знімати відео в стандарті Dolby
-          Vision — на це не здатні навіть професійні кінокамери, не кажучи вже про
-          інші смартфони.
         </h2>
         <Player
           autoPlay
@@ -65,15 +53,14 @@ const ServicePage = () => {
         </Player>
 
         <h2 className={styles.title}>Новий iMac Знайомтесь.</h2>
-
         <img
           className={styles.img}
-          src="https://www.apple.com/ua/mac/home/images/overview/hero_imac_24__eq5phrdpwjyq_large.jpg"
+          src="https://www.apple.com/ua/imac-24/images/overview/colors_lifestyle_fallback__fat816a51hua_large.jpg"
           alt="titlefoto"
         />
         <img
           className={styles.img}
-          src="https://www.apple.com/ua/imac-24/images/overview/colors_lifestyle_fallback__fat816a51hua_large.jpg"
+          src="https://www.apple.com/ua/mac/home/images/overview/hero_imac_24__eq5phrdpwjyq_large.jpg"
           alt="titlefoto"
         />
         <h2 className={styles.title}>
@@ -86,15 +73,11 @@ const ServicePage = () => {
         />
         <img
           className={styles.img}
-          src="https://www.apple.com/v/watch/home/aj/images/overview/why-watch/tile_why_watch__bzxlfokkvj36_large.jpg"
-          alt="titlefoto"
-        />
-        <img
-          className={styles.img}
           src="https://www.apple.com/v/watch/home/aj/images/overview/se/tile-watch-se__knji2d25x8qe_large.jpg"
           alt="titlefoto"
         />
       </div>
+      <Footer />
     </div>
   );
 };

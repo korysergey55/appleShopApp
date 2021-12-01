@@ -5,7 +5,7 @@ export const pathes = {
   cart: '/cart',
   order: '/order',
   contacts: '/contacts',
-  registration: '/registration',
+  service: '/service',
   login: '/login',
   reset: '/reset',
 }

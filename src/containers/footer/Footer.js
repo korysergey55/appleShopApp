@@ -1,6 +1,8 @@
 import * as React from 'react'
+import { useHistory } from 'react-router'
 import { shopLocation, shopTel, shopEmail, shopAdress } from '../../utils/location'
 import SotialList from '../sotialList/SotialList'
+import { pathes } from '../../utils/pathes'
 
 import styles from './styles.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -9,6 +11,8 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 
 
 const Footer = () => {
+  const history = useHistory()
+
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -63,10 +67,10 @@ const Footer = () => {
           </li>
           <li className={styles.item}>
             <h4 className={styles.title}>Useful Links</h4>
-            <p className={styles.text}>About us</p>
-            <p className={styles.text}>Contact</p>
-            <p className={styles.text}>Subscribe</p>
-            <p className={styles.text}>Shop</p>
+            <p className={styles.text} onClick={() => history.push(pathes.home)}>About us</p>
+            <p className={styles.text} onClick={() => history.push(pathes.contacts)}>Contact</p>
+            <p className={styles.text} onClick={() => history.push(pathes.service)}>Service</p>
+            <p className={styles.text} onClick={() => history.push(pathes.cart)}>Cart</p>
           </li>
         </ul>
       </div>
