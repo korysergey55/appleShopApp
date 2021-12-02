@@ -1,9 +1,9 @@
 import React, { useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProductsFilterSelector } from "../../../redux/filter/filterSelectors";
-import { v4 as uuidv4 } from 'uuid';
 import { setPhones } from "../../../redux/products/productsActions";
 import { getAllAdvByCategoryApi } from "../../../services/api";
+import { v4 as uuidv4 } from 'uuid';
 import ProductItem from "./productItem/productItem";
 import { ProductUl } from "./Styled";
 

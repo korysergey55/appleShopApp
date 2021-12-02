@@ -22,14 +22,12 @@
 
     .wripper {
       display: flex;
-      align-items: center;
       justify-content: center;
       flex-wrap: wrap;
 
       .map {
         width: 100%;
         max-width: 700px;
-        height: 590px;
         margin-right: 10px;
         margin-bottom: 20px;
         border-radius: 7px;

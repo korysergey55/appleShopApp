@@ -4,22 +4,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
-
+  
+  
   .title {
     font-size: 25px;
     font-weight: 700;
     text-align: center;
-    color: #ff843d;
+    color:$brandColor;
   }
 
   .list {
     display: flex;
     flex-direction: column;
-    list-style: none;
     width: 100%;
     border-bottom: 2px solid $brandColor;
   }

@@ -35,7 +35,7 @@ const ReachUs = () => {
             </div>
           </li>
           <li className={styles.item}>
-            <a className={styles.link} href="tel: +0-589-96369-95823">
+            <a className={styles.link} href={`tel:${shopTel}`}>
               <FontAwesomeIcon
                 className={styles.icon}
                 icon={faMobileAlt}
@@ -45,13 +45,13 @@ const ReachUs = () => {
             </a>
             <div className={styles.liContainer}>
               <p className={styles.subtitle}>Phone</p>
-              <a className={styles.text} href="tel: +0-589-96369-95823">
+              <a className={styles.text} href={`tel:${shopTel}`}>
                 {shopTel}
               </a>
             </div>
           </li>
           <li className={styles.item}>
-            <a className={styles.link} href="mailto:info@groxistore.com">
+            <a className={styles.link} href={`mailto:${shopEmail}`}>
               <FontAwesomeIcon
                 className={styles.icon}
                 icon={faEnvelope}
@@ -62,7 +62,7 @@ const ReachUs = () => {
             <div className={styles.liContainer}>
               <p className={styles.subtitle}>Email</p>
               <a className={styles.text}
-                href="mailto:info@groxistore.com"
+                href={`mailto:${shopEmail}`}
               >
                 {shopEmail}
               </a>
