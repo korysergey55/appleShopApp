@@ -11,7 +11,7 @@ export const addToCartOperation = (data) => async (dispatch) => {
     }
   } catch (error) {
     dispatch(setError(error));
-    toast.error(`${err.message}`, {
+    toast.error(`${error.message}`, {
       theme: 'colored',
     })
   }
@@ -20,12 +20,26 @@ export const addToCartOperation = (data) => async (dispatch) => {
 export const remuveFromCartOperation = (id) => async (dispatch) => {
   try {
     await dispatch(removeFromCartAction(id));
-    toast.success('Product was successfully remuved!', {
+    toast.info('Product was successfully remuved from cart!', {
       theme: 'colored',
     })
   } catch (error) {
     dispatch(setError(error));
-    toast.error(`${err.message}`, {
+    toast.error(`${error.message}`, {
+      theme: 'colored',
+    })
+  }
+};
+
+export const remuveAllFromCartOperation = () => async (dispatch) => {
+  try {
+    await dispatch(remuveAllFromCartAction());
+    toast.success('Products were successfully remuved!', {
+      theme: 'colored',
+    })
+  } catch (error) {
+    dispatch(setError(error));
+    toast.error(`${error.message}`, {
       theme: 'colored',
     })
   }
@@ -39,16 +53,4 @@ export const createOrderOperation = () => async (dispatch) => {
   }
 };
 
-export const remuveAllFromCartOperation = () => async (dispatch) => {
-  try {
-    await dispatch(remuveAllFromCartAction());
-    toast.success('Products were successfully remuved!', {
-      theme: 'colored',
-    })
-  } catch (error) {
-    dispatch(setError(error));
-    toast.error(`${err.message}`, {
-      theme: 'colored',
-    })
-  }
-};
+

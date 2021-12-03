@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { contactFormAction } from '../../../redux/auth/authActions'
+import { contactFormAction } from '../../../redux/userForm/userFormActions'
 import { Form, Input, Button, Row, Col } from 'antd'
 import styles from './styles.module.scss'
 

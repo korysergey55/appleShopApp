@@ -1,6 +1,6 @@
 import { createAction } from "@reduxjs/toolkit";
 
-const setFilter = createAction("@products/setFilter");
-const setFilterError = createAction("@products/setFilterError");
+export const setFilterAction = createAction("@filter/setFilterAction");
+export const setFilterError = createAction("@filter/setFilterError");
 
-export { setFilter, setFilterError };
+

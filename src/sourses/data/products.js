@@ -12,6 +12,7 @@ const laptopsJSON = [
     isSale: false,
     name: "Asus ROG Strix G15 G512LI-HN058 (90NR0381-M01630) Black",
     price: "25000",
+    qantity: 1,
   },
   {
     id: '2',
@@ -26,6 +27,7 @@ const laptopsJSON = [
     isSale: false,
     name: "Asus ROG Strix G15 G512LI-HN058 (90NR0381-M01630) Black",
     price: "25000",
+    qantity: 1,
   },
   {
     id: '3',
@@ -40,6 +42,7 @@ const laptopsJSON = [
     isSale: false,
     name: "Asus ROG Strix G15 G512LI-HN058 (90NR0381-M01630) Black",
     price: "25000",
+    qantity: 1,
   },
   {
     id: '4',
@@ -54,6 +57,7 @@ const laptopsJSON = [
     isSale: false,
     name: "Asus ROG Strix G15 G512LI-HN058 (90NR0381-M01630) Black",
     price: "25000",
+    qantity: 1,
   },
   {
     id: '5',
@@ -68,9 +72,10 @@ const laptopsJSON = [
     isSale: false,
     name: "Asus ROG Strix G15 G512LI-HN058 (90NR0381-M01630) Black",
     price: "25000",
+    qantity: 1,
   },
   {
-    id: '5',
+    id: '6',
     category: "laptops",
     description: "Екран 15.6' IPS (1920x1080) Full HD 144 Гц, матовий / Intel Core i5-10300H (2.5 — 4.5 ГГц) / RAM 16 ГБ / SSD 512 ГБ / nVidia GeForce GTX 1650 Ti, 4 ГБ / без ОД / LAN / Wi-Fi / Bluetooth / без ОС / 2.39 кг / чорний",
     image: "https://content.rozetka.com.ua/goods/images/big/196872104.jpg",
@@ -82,6 +87,7 @@ const laptopsJSON = [
     isSale: false,
     name: "Asus ROG Strix G15 G512LI-HN058 (90NR0381-M01630) Black",
     price: "25000",
+    qantity: 1,
   },
   {
     id: '7',
@@ -96,6 +102,7 @@ const laptopsJSON = [
     isSale: false,
     name: "Asus ROG Strix G15 G512LI-HN058 (90NR0381-M01630) Black",
     price: "25000",
+    qantity: 1,
   },
   {
     id: '8',
@@ -110,6 +117,7 @@ const laptopsJSON = [
     isSale: false,
     name: "Asus ROG Strix G15 G512LI-HN058 (90NR0381-M01630) Black",
     price: "25000",
+    qantity: 1,
   },
 ]
 
@@ -128,6 +136,7 @@ const phonesJSON = [
     isSale: false,
     name: "Asus ROG Strix G15 G512LI-HN058 (90NR0381-M01630) Black",
     price: "25000",
+    qantity: 1,
   },
   {
     id: '12',
@@ -143,6 +152,7 @@ const phonesJSON = [
     isSale: false,
     name: "Asus ROG Strix G15 G512LI-HN058 (90NR0381-M01630) Black",
     price: "25000",
+    qantity: 1,
   },
   {
     id: '13',
@@ -158,6 +168,7 @@ const phonesJSON = [
     isSale: false,
     name: "Asus ROG Strix G15 G512LI-HN058 (90NR0381-M01630) Black",
     price: "25000",
+    qantity: 1,
   },
   {
     id: '14',
@@ -173,6 +184,7 @@ const phonesJSON = [
     isSale: false,
     name: "Asus ROG Strix G15 G512LI-HN058 (90NR0381-M01630) Black",
     price: "25000",
+    qantity: 1,
   }
 ]
 
@@ -185,6 +197,7 @@ const ipadsJSON = [
     isSale: false,
     name: "Asus ROG Strix G15 G512LI-HN058 (90NR0381-M01630) Black",
     price: "25000",
+    qantity: 1,
   },
   {
     id: '16',
@@ -194,6 +207,7 @@ const ipadsJSON = [
     isSale: false,
     name: "Asus ROG Strix G15 G512LI-HN058 (90NR0381-M01630) Black",
     price: "25000",
+    qantity: 1,
   },
   {
     id: '17',
@@ -203,6 +217,7 @@ const ipadsJSON = [
     isSale: false,
     name: "Asus ROG Strix G15 G512LI-HN058 (90NR0381-M01630) Black",
     price: "25000",
+    qantity: 1,
   },
   {
     id: '18',
@@ -212,6 +227,7 @@ const ipadsJSON = [
     isSale: false,
     name: "Asus ROG Strix G15 G512LI-HN058 (90NR0381-M01630) Black",
     price: "25000",
+    qantity: 1,
   }
 ]
 

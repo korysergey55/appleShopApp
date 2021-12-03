@@ -1,7 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
-import { taggleModal } from "../../redux/cart/cartActions";
 import { cartItemSelector, cartTotalPricelSelector } from "../../redux/cart/cartSelectors";
 import { remuveAllFromCartOperation } from "../../redux/cart/cartOperations";
 

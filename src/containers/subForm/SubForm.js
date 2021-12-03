@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from "react-redux";
-import { subscribeFormAction } from "../../redux/auth/authActions";
+import { subscribeFormAction } from "../../redux/userForm/userFormActions";
 import styles from './styles.module.scss'
 
 const SubForm = () => {

@@ -1,16 +1,16 @@
 import { createReducer, combineReducers } from "@reduxjs/toolkit";
-import { setFilter, setFilterError } from "../../redux/filter/filterActions";
+import { setFilterAction, setFilterError } from "../../redux/filter/filterActions";
 
-const productsFilerReducer = createReducer("", {
- [setFilter]: (state, action) => action.payload,
+const filerReducer = createReducer("", {
+  [setFilterAction]: (state, action) => action.payload,
 });
 
-const productsFilerReducerError = createReducer("", {
+const filerReducerError = createReducer("", {
  [setFilterError]: (state, action) => action.payload,
 });
 
 const FilterReducer = combineReducers({
- filter: productsFilerReducer,
- filterError: productsFilerReducerError,
+ filter: filerReducer,
+ filterError: filerReducerError,
 });
 export default FilterReducer;

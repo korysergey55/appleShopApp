@@ -1,15 +1,14 @@
 import { createReducer, combineReducers } from "@reduxjs/toolkit";
 import {
   allProductsAction,
-  setPhones,
-  setLaptops,
-  setIpads,
-  setAppleWatches,
-  setAirPods,
-  setProductWithId,
+  setPhonesAction,
+  setLaptopsAction,
+  setIpadsAction,
+  setWatchesAction,
+  setAirPodsAction,
+  setProductWithIdAction,
   setError,
-  resetError,
-  setLoader,
+  setLoaderAction,
 } from "./productsActions";
 
 import { cloneDeep } from "lodash";
@@ -19,33 +18,34 @@ const phones = cloneDeep(phonesJSON)
 const ipads = cloneDeep(ipadsJSON)
 const allProducts = [...laptops, ...phones, ...ipads,]
 
-const productItemsReducer = createReducer(
-  { phones: [...phones], laptops: [...laptops], ipads: [...ipads], appleWatches: [], airPods: [] },
-  {
-    [setPhones]: (state, action) => ({ ...state, phones: [...action.payload] }),
-    [setLaptops]: (state, action) => ({ ...state, laptops: [...action.payload] }),
-    [setIpads]: (state, action) => ({ ...state, ipads: [...action.payload] }),
-    [setAppleWatches]: (state, action) => ({ ...state, appleWatches: [...action.payload] }),
-    [setAirPods]: (state, action) => ({ ...state, airPods: [...action.payload] }),
-  }
-);
-const productWithIdReducer = createReducer([],
-  { [setProductWithId]: (state, action) => ({ ...action.payload }) }
-);
 const allProductsReducer = createReducer([...allProducts],
   { [allProductsAction]: (state, action) => (state) }
 );
 
+const productItemsReducer = createReducer(
+  { phones: [...phones], laptops: [...laptops], ipads: [...ipads], appleWatches: [], airPods: [] },
+  {
+    [setPhonesAction]: (state, action) => ({ ...state, phones: [...action.payload] }),
+    [setLaptopsAction]: (state, action) => ({ ...state, laptops: [...action.payload] }),
+    [setIpadsAction]: (state, action) => ({ ...state, ipads: [...action.payload] }),
+    [setWatchesAction]: (state, action) => ({ ...state, appleWatches: [...action.payload] }),
+    [setAirPodsAction]: (state, action) => ({ ...state, airPods: [...action.payload] }),
+  }
+);
+
+const productWithIdReducer = createReducer([],
+  { [setProductWithIdAction]: (state, action) => ({ ...action.payload }) }
+);
+
 const productsErrorReducer = createReducer("", {
   [setError]: (_, action) => action.payload,
-  [resetError]: () => "",
 });
 
 const productsLoaderReducer = createReducer(false, {
-  [setLoader]: (state) => !state,
+  [setLoaderAction]: (state) => !state,
 });
 
-const productsReducer = combineReducers({
+const ProductsReducer = combineReducers({
   allItems: allProductsReducer,
   items: productItemsReducer,
   productWithId: productWithIdReducer,
@@ -53,4 +53,4 @@ const productsReducer = combineReducers({
   loader: productsLoaderReducer,
 });
 
-export default productsReducer;
+export default ProductsReducer;

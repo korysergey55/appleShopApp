@@ -4,10 +4,16 @@
   display: block;
   width: 100%;
   padding-top: 70px;
+
   .container {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
     width: 100%;
     max-width: 1300px;
+    min-height: 620px;
     margin: 0 auto;
     padding: 20px 15px;
   }

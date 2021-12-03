@@ -9,8 +9,8 @@ import {
 
 const cartItemsReducer = createReducer([], {
   [addToCartAction]: (state, action) => [...state, action.payload],
-  // state.map((item) => item === action.payload ? [...state, action.payload]
-  //   : [...state, action.payload]),
+  //  [state.items ? [...state.items?.filter((item) => item.id === action.payload.id)] : state, action.payload],
+  // [...state, action.payload],
   [removeFromCartAction]: (state, action) => [
     ...state.filter((cartItem) => cartItem.id !== action.payload),
   ],
@@ -28,7 +28,6 @@ const cartTotalPriceOrder = createReducer(false, {
       return acc;
     }, 0)
 });
-
 
 const cartErrorReducer = createReducer("", {
   [setError]: (_, action) => action.payload,

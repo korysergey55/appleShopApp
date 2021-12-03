@@ -1,18 +1,26 @@
 import React from "react";
 import { useHistory, useLocation, useRouteMatch } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { setProductWithId } from "../../../../redux/products/productsActions";
+import { useDispatch, useSelector } from "react-redux";
+import { setProductWithId, setProductWithIdAction } from "../../../../redux/products/productsActions";
 import { addToCartOperation } from "../../../../redux/cart/cartOperations";
 
 import { ProductLi } from "./Styled";
+import { cartItemSelector } from "../../../../redux/cart/cartSelectors";
+
 
 const ProductItem = ({ product }) => {
   const dispatch = useDispatch();
   const history = useHistory();
   const location = useLocation();
   const match = useRouteMatch();
+  const cartItems = useSelector(cartItemSelector)
 
-  const addProduct = () => {
+  const addToCart = () => {
+    const isDublicate = cartItems.filter((item) => item.id === product.id)
+    console.log(isDublicate)
+    if (isDublicate.length) {
+      return
+    }
     dispatch(addToCartOperation(product));
   };
 
@@ -21,7 +29,7 @@ const ProductItem = ({ product }) => {
       pathname: `${match.path}/${product.id}`,
       state: { from: location.pathname },
     });
-    dispatch(setProductWithId(product))
+    dispatch(setProductWithIdAction(product))
   };
 
   return (
@@ -44,7 +52,7 @@ const ProductItem = ({ product }) => {
           <button className="btnDetails" onClick={openDetails}>
             Details
           </button>
-          <button className="BtnAddToCart" onClick={addProduct} >
+          <button className="BtnAddToCart" onClick={addToCart} >
             Add to cart
           </button>
         </div>

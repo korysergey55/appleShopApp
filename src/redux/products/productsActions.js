@@ -1,27 +1,14 @@
 import { createAction } from "@reduxjs/toolkit";
 
-const allProductsAction = createAction("@products/allProductsAction");
-const setPhones = createAction("@products/getPhones");
-const setLaptops = createAction("@products/getLaptops");
-const setIpads = createAction("@products/getIpad");
-const setAppleWatches = createAction("@products/getAppleWatch");
-const setAirPods = createAction("@products/getAirPods");
-const setProductWithId = createAction("@products/setproductWithId");
+export const allProductsAction = createAction("@products/allProductsAction");
+export const setProductWithIdAction = createAction("@products/setProductWithIdAction");
 
-const setError = createAction("@products/setError");
-const resetError = createAction("@products/resetError");
-const setLoader = createAction("@products/getPhones");
+export const setPhonesAction = createAction("@products/setPhonesAction");
+export const setLaptopsAction = createAction("@products/setLaptopsAction");
+export const setIpadsAction = createAction("@products/setIpadsAction");
+export const setWatchesAction = createAction("@products/setWatchesAction");
+export const setAirPodsAction = createAction("@products/setAirPodsAction");
 
-
-export {
-  allProductsAction,
-  setPhones,
-  setLaptops,
-  setIpads,
-  setAppleWatches,
-  setAirPods,
-  setProductWithId,
-  setError,
-  resetError,
-  setLoader,
-};
+export const setError = createAction("@products/setError");
+export const setLoaderAction = createAction("@products/setLoaderAction");
+ 
