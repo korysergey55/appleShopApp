@@ -1,18 +1,21 @@
 import { createReducer } from "@reduxjs/toolkit";
 import { combineReducers } from "redux";
 import {
+  orderFormAction,
   subscribeFormAction,
-  subscribeFormActionError,
   contactFormAction,
+  orderFormActionError,
+  subscribeFormActionError,
   contactFormActionError
 } from "./userFormActions";
 
+
 const subscribeFormReducer = createReducer(null, {
-  [subscribeFormAction]: (state, action) => action.payload,
+  [subscribeFormAction]: (state, action) => action.payload
 });
 
 const contactFormReducer = createReducer(null, {
-  [contactFormAction]: (state, action) => action.payload,
+  [contactFormAction]: (state, action) => action.payload
 });
 
 const errorReducer = createReducer(null, {

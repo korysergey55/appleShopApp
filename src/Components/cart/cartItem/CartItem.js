@@ -6,7 +6,7 @@ import styles from "./styles.module.scss";
 import sprite from '../../../sourses/icons/productsSprite.svg'
 
 const CartListItem = ({ product }) => {
-  const { name, price, id, image, description } = product;
+  const { name, price, id, image, description, qantity } = product;
 
   const dispatch = useDispatch();
   const removeFromCart = () => {
@@ -20,6 +20,7 @@ const CartListItem = ({ product }) => {
         <h2 className={styles.title}>{name}</h2>
         <p className={styles.description}>{description}</p>
         <span className={styles.price}> {price} грн</span>
+        <p className={styles.description}>{qantity}</p>
         <div className={styles.iconContainer} onClick={removeFromCart}>
           <svg className={styles.iconBin}>
             <use href={sprite + "#icon-bin"} />

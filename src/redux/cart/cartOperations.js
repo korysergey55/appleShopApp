@@ -45,12 +45,5 @@ export const remuveAllFromCartOperation = () => async (dispatch) => {
   }
 };
 
-export const createOrderOperation = () => async (dispatch) => {
-  try {
-  }
-  catch (error) {
-    dispatch(setError(error));
-  }
-};
 
 
